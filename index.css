@@ -1,3 +1,7 @@
+/*Reference for importing google fonts -- https://www.w3docs.com/snippets/css/how-to-import-google-fonts-in-css-file.html */
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.google.com/specimen/ABeeZee?query=Ab');
+
 .picture {
   width: 300px;
   border: 1px solid white;
@@ -12,10 +16,10 @@
 }
 .header {
   width: 100%;
-  background-color: #b6afdb;
+  background-color: #1a377f;
   padding: 20px;
   text-align: center;
-  color: #231942;
+  color: #ffffff;
 }
 
 .picture-container {
@@ -26,22 +30,16 @@
   gap: 12px;
 }
 
-/* Ask why importing font isn't working */
-@font-face {
-  font-family: Montserrat;
-  src: url(https://fonts.googleapis.com/css?family=Montserrat);
-}
-
-div {
-  font-family: Montserrat;
+h1 {
+  font-family: 'ABeeZee', sans-serif;
+  color: white;
 }
 
 body {
   background-color: rgb(231, 231, 231);
-  font-family: Montserrat;
+  font-family: 'Montserrat', sans-serif;
   color: #25252B;
 }
-
 
 
 .page-container {
