@@ -3,19 +3,6 @@
 
 
 
-.recipe-container {
-  width: 80%;
-  margin: auto;
-  margin-top: 5rem;
-}
-
-.sub-pages {
-  position: absolute;
-  top: 45px;
-  right: 5%;
-  display: inline;
-}
-
 .header {
   display: flex;
   gap: 20px;
@@ -26,6 +13,17 @@
   text-align: left;
   margin: 0px;
   color: #ffffff;
+}
+
+.logo {
+  margin-left: 5%;
+}
+
+.sub-pages {
+  position: absolute;
+  top: 45px;
+  right: 5%;
+  display: inline;
 }
 
 .header-2 {
@@ -65,26 +63,11 @@ a:hover, a.active {
   text-decoration: underline;
 }
 
-
-
 body {
   background-color: white; /*rgb(231, 231, 231);*/
   font-family: 'Montserrat', sans-serif;
   color: #25252B;
   margin: 0px; /*b/c default is 8px*/
-}
-
-.logo {
-  position: absolute; 
-  top: 20px;
-  left: 10px;
-}
-
-.sub-pages {
-  position: absolute;
-  top: 45px;
-  right: 5%;
-  display: inline;
 }
 
 
@@ -97,6 +80,27 @@ body {
   align-items: center;
 }
 
+.spacer {
+  margin: 100px 0px 100px 0px;
+}
+.spacer-big {
+  margin: 200px 0px 200px 0px;
+}
+
+
+.recipe-container {
+  width: 80%;
+  margin: auto;
+  margin-top: 5rem;
+}
+
+
+.indent {
+  margin-left: 25px; 
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
 .test {
   width: 250px;
   height: 200px;
@@ -107,12 +111,6 @@ body {
   /*Reference https://stackoverflow.com/questions/28726430/css-how-to-scale-an-image-from-the-center-instead-of-top-left */
   transition: all 0.5s ease-in-out;
 
-}
-
-.indent {
-  margin-left: 25px; 
-  margin-top: 0px;
-  margin-bottom: 0px;
 }
 
 /*https://www.w3schools.com/css/tryit.asp?filename=trycss3_transition1*/
