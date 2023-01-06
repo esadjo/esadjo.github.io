@@ -3,17 +3,30 @@
 @import url('https://fonts.google.com/specimen/ABeeZee?query=Ab');
 
 .picture {
-  width: 300px;
+  width: 400px; /*350px;*/
+  height: 300px; /*250px;*/
   /*border: 1px solid white;*/
   border-radius: 20px;
   cursor: pointer;
   object-fit: cover;
   aspect-ratio: 1;
+  /*transition: width 1s, height 1s;*/
+  /*Reference https://stackoverflow.com/questions/28726430/css-how-to-scale-an-image-from-the-center-instead-of-top-left */
+  transition: all 0.5s ease-in-out;
+
 }
 
+/*https://www.w3schools.com/css/tryit.asp?filename=trycss3_transition1*/
 .picture:hover {
-  filter: brightness(80%);
+  /*filter: brightness(80%);*/
+  /*width: 450px; 
+  height: 350px;*/
+  /*transform: translate(-5%,-5%);*/
+  transform: scale(1.1,1.1);
+
 }
+
+
 .header {
   display: flex;
   gap: 20px;
@@ -34,12 +47,42 @@
 
 
 
-.picture-container {
-  display: flex;
+.project-container {
+  /*display: flex;*/
   flex-wrap: wrap;
   width: 80%;
-  margin: auto;
-  gap: 12px;
+  margin: 40px 0px 40px 0px;
+  gap: 20px;
+}
+
+.rectangle-container {
+  border-radius: 25px;
+  background-color: grey;
+  padding: 100px;
+  width: 900px;
+  height: 300px;
+  transition: color 1s;
+
+  /*display: block;
+  margin-left: auto;
+  margin-right: auto;*/
+  /*margin: auto;*/
+}
+
+/*.rectangle-container:hover {
+  filter: brightness(80%);
+}*/
+
+
+
+.project-description {
+  /*QUESTION: Question of how to set the length of the words before wraps!*/
+  display: flex;
+  flex-direction: column;
+  /*margin: auto;*/
+  /*line-height: 10px;*/
+  /*gap: -40px;*/ /*Question of how to reduce the gap size */
+  
 }
 
 .sub-pages {
@@ -49,6 +92,8 @@
   display: inline;
 }
 
+
+
 .header-2 {
   display: inline;
   margin-right: 20px;
@@ -57,6 +102,18 @@
 h1 {
   font-family: 'ABeeZee', sans-serif;
   color: white;
+}
+
+h2 {
+  font-family: 'ABeeZee', sans-serif;
+  font-weight: bold;
+  font-size: 50px;
+}
+
+h3 {
+  font-family: 'ABeeZee', sans-serif;
+  font-size: 35px;
+  font-weight: bold; 
 }
 
 a {
@@ -81,4 +138,29 @@ body {
   width: 100%; /* 80%; */
   /*margin-top: 5rem;*/
   /*margin: 0px;*/ /*auto;*/
+}
+
+.body-container {
+ /* margin: 200px;*/
+  margin: auto;
+  width: 70%
+  /*justify-content: center;*/
+  
+}
+
+.project {
+  display: flex;
+  gap: 70px; 
+  color: #25252B;
+  /*justify-content: flex-start;*/  /*center;*/
+  align-items: center;
+}
+
+/*.project:hover {
+  color: blue;
+  align-items: center;
+}*/
+
+.spacer {
+  margin: 100px;
 }
