@@ -89,11 +89,7 @@
 
 
 
-.header-2 {
-  display: inline;
-  margin-right: 20px;
-  font-size: 25px;
-}
+
 
 h1 {
   font-family: 'ABeeZee', sans-serif;
@@ -104,6 +100,12 @@ h2 {
   font-family: 'ABeeZee', sans-serif;
   font-weight: bold;
   font-size: 50px;
+}
+
+.header-2 {
+  display: inline;
+  margin-right: 20px;
+  font-size: 25px;
 }
 
 h3 {
