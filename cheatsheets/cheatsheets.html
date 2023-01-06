@@ -5,7 +5,7 @@
   <body>
     <div class="page-container"> <!--To group things together-->
       <div class="header">
-        <h1><a href="./index.html">Emma Sadjo 438 Portfolio</a></h1> <!--Question of how to reset to just go to the home page inst-->>
+        <h1><a href="./index.html">Emma Sadjo 438 Portfolio UPDATE!! AND spacing before page starts to. Update header and spacing in other pages</a></h1> <!--Question of how to reset to just go to the home page inst-->>
         <div class="sub-pages">
           <h2 class="header-2"><a href="./cheatsheets/cheatsheets.html">Cheatsheets</a></h2>
           <h2 class="header-2"><a href="./about/about-me.html">About me</a></h2>
@@ -17,55 +17,49 @@
           <h1>CSS</h1>
           <p>Code to use for styling.</p>
           <h2>CSS Transition</h2>
+          <p>
+            The following code was used to apply a <b>scale</b> transformation to the images of each project. When hovering over the image, it scales to increase by 10%<br>
+          </p>
+          <div class="recipe-container">
+            <p>
+              .picture {<br>
+            </p>
+            <p class="indent">
+                width: 400px;<br>
+                height: 300px;<br>
+                border-radius: 20px;<br>
+                cursor: pointer;<br>
+                object-fit: cover;<br>
+                aspect-ratio: 1;<br>
+                transition: all 0.5s ease-in-out;
+            </p>
+              
+            <p>
+              }<br>
+              <br>
+              .picture:hover {<br>
+            </p>
+            <p class="indent">
+                transform: scale(1.1,1.1);<br>
+            </p>
+          </div>
+          
+          <p>
+            }<br>
+            Below is an example of this scale transition in action.<br>
+          </p>
+          
+          <img
+          class="test"
+          src="https://images.unsplash.com/photo-1446038236174-69712e24d137?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=988&q=80"
+          />
+
+          <p>
+            The following Stackoverflow thread was referenced to create this CSS transition.<br>
+            <button><a href="https://stackoverflow.com/questions/28726430/css-how-to-scale-an-image-from-the-center-instead-of-top-left">Stackoverflow thread</a></button>
+          </p>
         </div>
     </div>
 
-
-
-
-
-
-
-      <ul class="ingredient-list">
-        <li>2 sticks softened butter</li>
-        <li>3/4 cup granulated sugar</li>
-        <li>1 cup brown sugar (packed)</li>
-        <li>2 eggs</li>
-        <li>1 1/2 Tbsp. pure vanilla</li>
-        <li>2 1/2 cups all purpose flour</li>
-        <li>2 1/2 cups oatmeal (I used quick oats)</li>
-        <li>1 tsp. baking soda</li>
-        <li>1 tsp. kosher salt</li>
-        <li>2 cups caramel (Bits, by Kraft)</li>
-        <li>1 1/2 cups dried blueberries (found mine at Costco)</li>
-        <li>1 cup white chocolate chips (or chopped white chocolate)</li>
-      </ul>
-      <h2>Directions</h2>
-      <ol class="directions">
-        <li>Preheat oven to 350 degrees F.</li>
-        <li>
-          In a stand mixer, beat the butter and sugars until light and fluffy.
-        </li>
-        <li>Beat in eggs and vanilla until well combined.</li>
-        <li>
-          Place flour, oatmeal, baking soda and salt into a large bowl; mix to
-          combine.
-        </li>
-        <li>
-          Add dry ingredients to wet ingredients along with the caramel bits,
-          blueberries and white chocolate. Mix until just combined.
-        </li>
-        <li>
-          If using a muffin top pan, spray with cooking spray, scoop about 1/4
-          Cup dough into each muffin top pan cup, then press to about 1/2 inch
-          thick. Bake for 11-14 minutes or until edges are just golden brown.
-        </li>
-        <li>
-          If using a normal baking sheet. Use a medium cookie scoop and scoop
-          dough onto a silpat or parchment lined baking sheet. Bake for 9-11
-          minutes or until edges are just turning golden brown.
-        </li>
-        <li>Remove and let cool for 5 minutes before removing from pan.</li>
-      </ol>
   </body>
 </html>

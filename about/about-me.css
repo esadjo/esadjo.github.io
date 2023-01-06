@@ -1,9 +1,11 @@
-.picture {
-  width: 300px;
-  border-radius: 10px;
+.picture-profile {
+  width: 80px;
+  height: 80px;
+  border-radius: 20px;
   object-fit: cover;
   aspect-ratio: 1;
 }
+
 
 .bio-container {
   display: flex;
