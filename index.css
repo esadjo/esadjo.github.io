@@ -4,8 +4,8 @@
 
 .picture {
   width: 300px;
-  border: 1px solid white;
-  border-radius: 10px;
+  /*border: 1px solid white;*/
+  border-radius: 20px;
   cursor: pointer;
   object-fit: cover;
   aspect-ratio: 1;
@@ -15,12 +15,24 @@
   filter: brightness(80%);
 }
 .header {
+  display: flex;
+  gap: 20px;
   width: 100%;
-  background-color: #1a377f;
+  background-color: rgb(47, 47, 47); /*#1a377f;*/
+  flex-wrap: wrap;
   padding: 20px;
-  text-align: center;
+  text-align: left;
+  margin: 0px;
   color: #ffffff;
 }
+
+.logo {
+  position: absolute; 
+  top: 20px;
+  left: 10px;
+}
+
+
 
 .picture-container {
   display: flex;
@@ -30,15 +42,38 @@
   gap: 12px;
 }
 
+.sub-pages {
+  position: absolute;
+  top: 45px;
+  right: 5%;
+  display: inline;
+}
+
+.header-2 {
+  display: inline;
+  margin-right: 20px;
+}
+
 h1 {
   font-family: 'ABeeZee', sans-serif;
   color: white;
 }
 
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:active {
+  color: blue;
+}
+
+
 body {
-  background-color: rgb(231, 231, 231);
+  background-color: white; /*rgb(231, 231, 231);*/
   font-family: 'Montserrat', sans-serif;
   color: #25252B;
+  margin: 0px; /*b/c default is 8px*/
 }
 
 
