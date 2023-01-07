@@ -24,7 +24,7 @@
   display: flex;
   gap: 20px;
   width: 100%;
-  background-color: rgb(47, 47, 47); /*#1a377f;*/
+  background-color: #1C4A6E; /*#1a377f;*/
   flex-wrap: wrap;
   padding: 20px;
   text-align: left;
@@ -34,6 +34,7 @@
 
 .logo {
   margin-left: 5%;
+  font-size: 2em;
 }
 
 
@@ -90,13 +91,15 @@
 
 h1 {
   font-family: 'ABeeZee', sans-serif;
-  color: white;
+  color: #1C4A6E;
+  font-weight: bold;
+  font-size: 50px;
 }
 
 h2 {
   font-family: 'ABeeZee', sans-serif;
   font-weight: bold;
-  font-size: 50px;
+  font-size: 40px;
 }
 
 h3 {
@@ -138,10 +141,6 @@ body {
   align-items: center;
 }
 
-.body-container {
- /* margin: 200px;*/
-}
-
 .project {
   display: flex;
   gap: 70px; 
@@ -160,4 +159,8 @@ body {
 }
 .spacer-big {
   margin: 200px 0px 200px 0px;
+}
+
+.spacer-small {
+  margin: 50px 0px 50px 0px;
 }

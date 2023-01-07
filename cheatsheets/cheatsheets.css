@@ -7,7 +7,7 @@
   display: flex;
   gap: 20px;
   width: 100%;
-  background-color: rgb(47, 47, 47); /*#1a377f;*/
+  background-color: #1C4A6E; /*#1a377f;*/
   flex-wrap: wrap;
   padding: 20px;
   text-align: left;
@@ -17,6 +17,7 @@
 
 .logo {
   margin-left: 5%;
+  font-size: 2em;
 }
 
 .sub-pages {
@@ -34,18 +35,20 @@
 
 h1 {
   font-family: 'ABeeZee', sans-serif;
-  color: white;
+  color: #1C4A6E;;
+  font-weight: bold;
+  font-size: 40px;
 }
 
 h2 {
   font-family: 'ABeeZee', sans-serif;
   font-weight: bold;
-  font-size: 50px;
+  font-size: 30px;
 }
 
 h3 {
   font-family: 'ABeeZee', sans-serif;
-  font-size: 35px;
+  font-size: 25px;
   font-weight: bold; 
 }
 
@@ -88,10 +91,11 @@ body {
 }
 
 
-.recipe-container {
+.content-container {
   width: 80%;
   margin: auto;
   margin-top: 5rem;
+  margin-bottom: 5rem;
 }
 
 
@@ -99,6 +103,10 @@ body {
   margin-left: 25px; 
   margin-top: 0px;
   margin-bottom: 0px;
+}
+
+.small {
+  font-size: 16px;
 }
 
 .test {
@@ -116,4 +124,24 @@ body {
 /*https://www.w3schools.com/css/tryit.asp?filename=trycss3_transition1*/
 .test:hover {
   transform: scale(1.1,1.1);
+}
+
+button {
+  border-radius: 30px;
+  font-size: 18px;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #1C4A6E; 
+  color: white;
+  border: 2px solid #1C4A6E;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 60%;
 }

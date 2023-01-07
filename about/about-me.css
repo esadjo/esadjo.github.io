@@ -1,6 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.google.com/specimen/ABeeZee?query=Ab');
+
+
 .picture-profile {
-  width: 80px;
-  height: 80px;
+  width: 200px;
+  height: 200px;
   border-radius: 20px;
   object-fit: cover;
   aspect-ratio: 1;
@@ -19,7 +23,7 @@
   display: flex;
   gap: 20px;
   width: 100%;
-  background-color: rgb(47, 47, 47); /*#1a377f;*/
+  background-color: #1C4A6E; /*#1a377f;*/
   flex-wrap: wrap;
   padding: 20px;
   text-align: left;
@@ -29,6 +33,7 @@
 
 .logo {
   margin-left: 5%;
+  font-size: 2em;
 }
 
 .sub-pages {
@@ -46,7 +51,7 @@
 
 h1 {
   font-family: 'ABeeZee', sans-serif;
-  color: white;
+  color: #1C4A6E;
 }
 
 h2 {
@@ -98,6 +103,20 @@ body {
 .spacer-big {
   margin: 200px 0px 200px 0px;
 }
+
+.spacer-small {
+  margin: 50px 0px 50px 0px;
+}
+
+.body-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 30px;
+}
+
+
 
 
 

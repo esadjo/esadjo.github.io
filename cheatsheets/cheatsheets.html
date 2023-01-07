@@ -14,20 +14,20 @@
       </div>
 
 
-        <div class="recipe-container">
+        <div class="content-container">
           <p>A compilation of helpful code to reference for front-end development!</p>
-          
+          <div class="spacer"></div>
           <h1>CSS</h1>
           <p>Code to use for styling.</p>
-          <h2>CSS Transition</h2>
+          <h2>1. CSS Transition</h2>
           <p>
-            The following code was used to apply a <b>scale</b> transformation to the images of each project. When hovering over the image, it scales to increase by 10%<br>
+            The following code was used to apply a <b>scale</b> transformation to the images of each project. When hovering over the image, it scales to increase by 10%. The values for properties such as width, height, border-radius can be customized. <br>
           </p>
-          <div class="recipe-container">
-            <p>
+          <div class="content-container">
+            <p class="small">
               .picture {<br>
             </p>
-            <p class="indent">
+            <p class="indent small">
                 width: 400px;<br>
                 height: 300px;<br>
                 border-radius: 20px;<br>
@@ -37,29 +37,34 @@
                 transition: all 0.5s ease-in-out;
             </p>
               
-            <p>
+            <p class="small">
               }<br>
               <br>
               .picture:hover {<br>
             </p>
-            <p class="indent">
+            <p class="indent small">
                 transform: scale(1.1,1.1);<br>
             </p>
+            <p class="small">
+            }<br>
           </div>
           
           <p>
-            }<br>
             Below is an example of this scale transition in action.<br>
           </p>
-          
-          <img
-          class="test"
-          src="https://images.unsplash.com/photo-1446038236174-69712e24d137?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=988&q=80"
-          />
+          <div style="margin-top: 5rem; margin-bottom: 5rem;">
+            <img
+            class="test"
+            src="https://images.unsplash.com/photo-1446038236174-69712e24d137?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=988&q=80"
+            />
+          </div>
 
           <p>
             The following Stackoverflow thread was referenced to create this CSS transition.<br>
-            <button><a href="https://stackoverflow.com/questions/28726430/css-how-to-scale-an-image-from-the-center-instead-of-top-left">Stackoverflow thread</a></button>
+            <div class="spacer-small">
+              <!--Reference for open link in new tab -- https://css-tricks.com/snippets/html/open-link-in-a-new-window/-->
+              <button><a href="https://stackoverflow.com/questions/28726430/css-how-to-scale-an-image-from-the-center-instead-of-top-left" target="_blank" style="text-decoration: none;">Stackoverflow thread</a></button>
+            </div>
           </p>
         </div>
     </div>
