@@ -10,7 +10,6 @@
           <h2 class="header-2"><a href="../cheatsheets/cheatsheets.html">Cheatsheets</a></h2>
           <h2 class="header-2"><u><a href="../reflection/reflection.html">Reflections</a></u></h2>
           <h2 class="header-2"><a href="../about/about-me.html">About me</a></h2>
-          
         </div>
       </div>
 
@@ -21,18 +20,18 @@
           <div class="spacer"></div>
           <h2>MP0 Writeup</h2>
           <p><i>A reflection on creating this portfolio website</i><br></p>
-          <h3>Steps</h3>
-          
+          <h3>Overview</h3>
+          <p>The following steps were taken in my process for creating this website.</p>
           
           <ol>
-            <h4>Setting foundation -- Repository</h4>
+            <h4>Setting the Foundation — Repository</h4>
             <ol>
               <li>Created github repository</li>
               <li>Downloaded zip of example files provided by instructor</li> 
               <li>Renamed and added additional folders and files to and uploaded files to Github repository</li> 
             </ol>
           
-            <h4>Creating home page</h4>
+            <h4>Creating the Home Page</h4>
             <ol>
               <li>Created header</li> 
               <li>Adding links to different pages</li>
@@ -49,21 +48,21 @@
               <li>Researched links. Modified header links to make sure indexing? and returning to right levels of directory to access correct folders files under</li>
             </ol>
           
-            <h4>Cheatsheets</h4>
+            <h4>Creating the Cheatsheets Page</h4>
             <ol>
               <li>Involved creating styling for spacing and indenting content to distinguish between the different sections of content on the page (e.g., description of code vs sample code)</li>
               <li>Researching css for buttons to refresh</li> 
               <li>Researching refresher on link properties and how to design links to open in a new tab</li> 
             </ol>
 
-            <h4>About Me Page</h4> 
+            <h4>Creating the About Me Page</h4> 
             <ol>
               <li>Modifying CSS from home page, index.css, to carry over styling.</li>  
               <li>Centering image and bio description on page</li>  
               <li>Researching and trouble shooting why picture not loading when viewing on live website</li> 
             </ol>
           
-            <h4>Reflection Section</h4>
+            <h4>Creating the Reflection Page</h4>
             <ol>
               <li>Creating reflections fold and css and html files and adding reflections page to header of other pages and adding content to that page</li> 
             </ol>
@@ -75,8 +74,19 @@
         </ol>
         
         <p>Continuously committing changes throughout the cycle</p> 
-        <p>Reflection - having issues with hanges updating -- so would open index.html file with Live Server or view the website from the http link from</p>   
-        </div>
+
+        <h3>Issue</h3>
+        <p> One issue I encountered while making this website was with creating urls to navigate between the different website pages. If accessing one of the tabs from a page other than the home page, one would get a 404 error. Looking at the url in the web browser revealed that the paths were being stacked on each other, rather than being refreshed. Because I set up the directory to have a folder for the code associated with each page, the urls needed to move up into the parent directories instead of further down nonexistent subdirectories. I troubleshooted this by reading through a Developer Mozilla HTML guide to <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks" target="_blank">creating hyperlinks</a>I found that the urls I created in the html files needed to be proceeded by two periods (..) to move back to the parent directory before accessing the sub-directories each page's code was under.</p>
+        
+        <h3>CSS Transition</h3>
+        <p>I applied a time-scaling CSS transition to the images associated with each project on the home page. When hovering over the image, the image's size increases by 10%.</p>
+        <p>I chose this transition because it would help to emphasize the visual content of each project to further grab users' attention.</p>
+        <p>To implement this CSS transition, I first researched the different types of CSS transitions and transition properties supported, such as through <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions" target="_blank">Mozilla Developer</a> and <a href="https://www.joshwcomeau.com/animation/css-transitions/" target="_blank">Josh W Comeau's CSS Transition guide</a>. I then attempted to create this transition. After finding that the image was not centering in the larger container of each project, I looked on Stackoverflow to see if anyone else had encountered this problem, including this <a href="https://stackoverflow.com/questions/28726430/css-how-to-scale-an-image-from-the-center-instead-of-top-left" target="_blank"></a>thread I think looked on Stackflow to see if anyone else had encountered a similar problem. The suggestions made didn't apply to my scenario, and after exploring with the inspector developer tools, I found that it had to do with the display flex and align-items properties of the overarching divs applied to the larger group of content including the image.</p>
+        
+
+        <h3>Ideas and Future</h3>
+        <p></p>
+      </div>
     </div>
 
   </body>
