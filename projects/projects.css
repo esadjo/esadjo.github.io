@@ -52,12 +52,6 @@ h3 {
   font-weight: bold; 
 }
 
-h4 {
-  font-family: 'ABeeZee', sans-serif;
-  font-size: 20px;
-  font-weight: normal;
-}
-
 p {
   font-size: 18px;
 }
@@ -70,15 +64,6 @@ a {
 /*Reference -- https://stackoverflow.com/questions/25579888/keeping-a-active-until-another-link-is-clicked */
 a:hover, a.active {
   text-decoration: underline;
-}
-
-.a-2 {
-  color: #1C4A6E;
-  text-decoration: underline;
-}
-
-.a-2:hover {
-  font-weight: bold;
 }
 
 body {
@@ -99,10 +84,10 @@ body {
 }
 
 .spacer {
-  margin: 50px 0px 50px 0px;
+  margin: 100px 0px 100px 0px;
 }
 .spacer-big {
-  margin: 100px 0px 100px 0px;
+  margin: 200px 0px 200px 0px;
 }
 
 
@@ -113,6 +98,17 @@ body {
   margin-bottom: 5rem;
 }
 
+
+.indent {
+  margin-left: 25px; 
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.small {
+  font-size: 16px;
+}
+
 .test {
   width: 250px;
   height: 200px;
@@ -121,7 +117,7 @@ body {
   object-fit: cover;
   aspect-ratio: 1;
   /*Reference https://stackoverflow.com/questions/28726430/css-how-to-scale-an-image-from-the-center-instead-of-top-left */
-  transition: all 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;;
 
 }
 
@@ -148,8 +144,4 @@ button {
 
 button:hover {
   opacity: 60%;
-}
-
-ul, ol {
-  font-size: 18px;
 }
