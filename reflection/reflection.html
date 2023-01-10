@@ -26,17 +26,17 @@
           <ol>
             <h4>Setting the Foundation — Repository</h4>
             <ol>
-              <li>Created github repository</li>
-              <li>Downloaded zip of example files provided by instructor</li> 
-              <li>Renamed and added additional folders and files to and uploaded files to Github repository</li> 
+              <li>Created a new GitHub repository</li>
+              <li>Downloaded a zip of example files provided by instructor</li> 
+              <li>Renamed and uploaded additional folders and files to the Github repository</li> 
             </ol>
           
             <h4>Creating the Home Page</h4>
             <ol>
-              <li>Created a header that was applied to all pages. This invloved specifying the links to different pages, modifying the link style to remain white and underline when hovering, modifying the background color and body margin to make the header full screen, learning how to import external fonts e.g., Google Fonts) for further customization, figuring how to vertically center and horizontally -left and -right align the logo and tabs within the header container.</li>
-              <li>Created divs to group together content for images. This involved learning about flexbox, align-items, justify-content, and other styling properties.</li> 
-              <li>Creating divs to group the details of each project into interactive, colorful containers. This involved determining how to center the containers housing the content within the page, centering the content within those containers. To add interactivity through hovering, I researching types of CSS transitions. I test transition with scale, text color changing on hover. I then went with the CSS transition for scaling each project image when hovering. I also modified the project container divs to have a more polished look with color and rounded edges.</li> 
-              <li>Reached into creating hyperlinks within websites and modified the header links to make sure properly transverse between the correct levels of subdirectories.</li>
+              <li>Created a header that was applied to all the web pages. This involved specifying the links to different pages, modifying the link style to remain white and underlined when hovering, modifying the background color and body margin to make the header full screen, learning how to import external fonts (e.g., Google Fonts) for further customization, and figuring how to vertically center and horizontally -left and -right align the logo and tabs within the header container.</li>
+              <li>Created divs to group together content for the project images. This involved learning about flexbox, align-items, justify-content, and other styling properties.</li> 
+              <li>Creating divs to group the details of each project into interactive, colorful containers. This involved determining how to center the containers housing the content within the page, and centering the content within those containers. To add interactivity through hovering, I researched types of CSS transitions. I tested transitions with scale and text color changing on hover. I then proceeded with the CSS transition for scaling each project image while hovering. I also modified the project container divs to have a more polished look with color and rounded edges.</li> 
+              <li>Researched into creating hyperlinks within websites and modified the header links to ensure they properly move between the correct levels of subdirectories.</li>
             </ol>
             <div class="spacer"></div>
             <div style="display: flex;justify-content:center">
@@ -47,21 +47,21 @@
           
             <h4>Creating the Cheatsheets Page</h4>
             <ol>
-              <li>Defined the styling for the page layout, such as spacing and indenting. This was to better distinguish between the different sections of content on the page (e.g., descriptions of the code vs sample code itself)</li>
+              <li>Defined the styling for the page layout, such as spacing and indenting. This was to better distinguish between the different sections of content on the page (e.g., descriptions of the code v.s. the sample code itself).</li>
               <li>Researched to get a refresher on styling buttons.</li> 
               <li>Researched link properties, such as how to design links to open in a new tab.</li> 
             </ol>
 
             <h4>Creating the About Me Page</h4> 
             <ol>
-              <li>Repurposed and modifyed CSS from the cheatsheets page, cheatsheets.css, to carry over consistent styling.</li>  
+              <li>Repurposed and modified CSS from the cheatsheets page, cheatsheets.css, to carry over consistent styling.</li>  
               <li>Defined the styling of the page layout to center the image and bio description on the page.</li>  
-              <li>Researched and troubleshot pictures not loading when viewing the live website live, rather than locally.</li> 
+              <li>Researched and troubleshot pictures not loading when viewing the website live, rather than locally.</li> 
             </ol>
           
             <h4>Creating the Reflection Page</h4>
             <ol>
-              <li>Created css and html files for the page by modifying the cheatsheets.css file 
+              <li>Created CSS and HTML files for the page by modifying the cheatsheets.css file 
               <li>Updated the header to include a reflections section across all website pages</li> 
             </ol>
 
@@ -70,20 +70,20 @@
               <li>Made small style changes across pages, such as re-defining the link states of the header tabs to be underlined when currently on that page.</li> 
             </ol> 
 
-            <p>Lastly, I created html files for each project to as add the details of the projects through the course.</p>
+            <p>Lastly, I created HTML files for each project to support adding the details of the projects throughout the course.</p>
         </ol>
         
         <p>Throughout this process, I was also continuously committing changes throughout the cycle</p> 
         
         <div class="spacer-big"></div>
         <h3>Issue</h3>
-        <p>One issue I encountered while making this website was with creating urls to navigate between the different website pages. If accessing one of the tabs from a page other than the home page, one would get a 404 error. Looking at the url in the web browser revealed that the paths were being stacked on each other, rather than being refreshed. Because I set up the directory to have a folder for the code associated with each page, the urls needed to move up into the parent directories instead of further down nonexistent subdirectories. I troubleshooted this by reading through a Developer Mozilla HTML guide to <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks" target="_blank" class="a-2">creating hyperlinks</a>. I found that the urls I created in the html files needed to be proceeded by two periods (..) to move back to the parent directory before accessing the sub-directories each page's code was under.</p>
+        <p>One issue I encountered while making this website was with creating URLs to navigate between the different website pages. If accessing one of the tabs from a page other than the home page, one would get a 404 error. Looking at the URL in the web browser revealed that the paths were being stacked on each other, rather than being added after the domain name. Because I set up the directory to have a folder for the code associated with each page, the URLs needed to move up into the parent directories instead of going further down nonexistent subdirectories. I troubleshot this by reading through a Developer Mozilla HTML guide to <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks" target="_blank" class="a-2">creating hyperlinks</a>. I found that the URLs I created in the HTML files needed to be proceeded by two periods (..) to move back to the parent directory before accessing the sub-directories each page's code was under.</p>
         
         <div class="spacer-big"></div>
         <h3>CSS Transition</h3>
         <p>I applied a time-scaling CSS transition to the images associated with each project on the home page. When hovering over the image, the image's size increases by 10%.</p>
         <p>I chose this transition because it would help to emphasize the visual content of each project to further grab users' attention.</p>
-        <p>To implement this CSS transition, I first researched the different types of CSS transitions and transition properties supported, such as through <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions" target="_blank" class="a-2">Mozilla Developer</a> and <a href="https://www.joshwcomeau.com/animation/css-transitions/" target="_blank" class="a-2">Josh W Comeau's CSS Transition guide</a>. I then attempted to create this transition. After finding that the image was not centering in the larger container of each project, I looked on Stackoverflow to see if anyone else had encountered this problem, including this <a href="https://stackoverflow.com/questions/28726430/css-how-to-scale-an-image-from-the-center-instead-of-top-left" target="_blank" class="a-2"></a>thread I think looked on Stackflow to see if anyone else had encountered a similar problem. The suggestions made didn't apply to my scenario, and after exploring with the inspector developer tools, I found that it had to do with the display flex and align-items properties of the overarching divs applied to the larger group of content including the image.</p>
+        <p>To implement this CSS transition, I first researched the different types of CSS transitions and transition properties supported, such as through <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions" target="_blank" class="a-2">Mozilla Developer</a> and <a href="https://www.joshwcomeau.com/animation/css-transitions/" target="_blank" class="a-2">Josh W Comeau's CSS Transition guide</a>. I then attempted to create this transition. After finding that the image was not centering in the larger container of each project, I looked on Stackoverflow to see if anyone else had encountered a similar problem, including this <a href="https://stackoverflow.com/questions/28726430/css-how-to-scale-an-image-from-the-center-instead-of-top-left" target="_blank" class="a-2"></a>thread. The suggestions made for this thread didn't apply to my scenario. After exploring with the inspector developer tools of my website, I found that the problem had to do with the display flex and align-items properties of the overarching divs applied to the larger group of content including the image. With this knowledge, I was able to successfully center the project containers with the CSS transition applied to the images.</p>
         <p>Below is a gif demonstrating this functionality.</p>
         <div class="spacer"></div>
         <div style="display: flex;justify-content:center">
@@ -92,9 +92,9 @@
         
         <div class="spacer-big"></div>
         <h3>Ideas and Future</h3>
-        <p>Some additional potential ideas and features to the site in the future include:</p>
+        <p>Some potential ideas and features toadd to the site in the future include:</p>
         <ul>
-          <li>Making the project container elements responsively resize to the size of the browser. Currently, changing the browser size, cuts off the content from view.</li>  
+          <li>Making the project container elements responsively resize to the size of the browser. Currently, changing the browser size cuts off the parts of content from view.</li>  
           <li>Adding additional indicators of which project is being hovered on within the home page, such as text-decoration for the project titles</li>
           <li>Supporting additional user interaction, such as users being able to directly change the example code in the cheatsheets page</li>
           <li>Adding a logo with CSS transitions to the header</li>
