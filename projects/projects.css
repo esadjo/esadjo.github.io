@@ -40,6 +40,15 @@ h1 {
   font-size: 60px;
 }
 
+.a-2 {
+  color: #1C4A6E;
+  text-decoration: underline;
+}
+
+.a-2:hover {
+  font-weight: bold;
+}
+
 h2 {
   font-family: 'ABeeZee', sans-serif;
   color: #1C4A6E;

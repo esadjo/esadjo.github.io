@@ -1,0 +1,128 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="./reflection.css"/>
+  </head>
+  <body>
+    <div class="page-container"> 
+      <div class="header" style="background-color: #284A6B;">
+        <h1 class="logo"><a href="../index.html">Emma Sadjo 438 Portfolio</a></h1> 
+        <div class="sub-pages">
+          <h2 class="header-2"><u><a href="../cheatsheets/cheatsheets.html">Cheatsheets</a></u></h2>
+          <h2 class="header-2"><a href="../about/about-me.html">About me</a></h2>
+          
+        </div>
+      </div>
+
+      <div class="page-container-2" style="background-color: #E4EDF5;">
+        <!--<div class="rectangle-container" style="background-color: rgb(251, 216, 216);">-->  
+          <div class="project">
+            <a href="./projects/finalproject.html">
+              <img
+                class="picture-title"
+                src="/images/portfoliosetupim.png"
+                alt="A question mark shaped red neon sign"
+                /> 
+            </a>
+            <div class="project-description">
+              <h1 style="color:#284A6B">Portfolio Site Setup</h1>
+              <div class="p2">Creating a portfolio website for HCDE 438, Web Technologies, using HTML and CSS.</div>
+            </div>
+          </div>
+        <!--</div>-->
+      </div>
+      </div>
+
+      <div class="project-container">
+        <div class="content-container">
+          <h2>Reflections</h2>
+          <p>Reflections on my experiences in HCDE 438</p>
+          <div class="spacer"></div>
+          <h3>MP0 Writeup</h3>
+          <p><i>A reflection on creating this portfolio website</i><br></p>
+          <h4>Overview</h4>
+          <p>The following steps were taken in my process for creating this website.</p>
+          
+          <ol>
+            <h5>Setting the Foundation — Repository</h5>
+            <ol>
+              <li>Created a new GitHub repository</li>
+              <li>Downloaded a zip of example files provided by instructor</li> 
+              <li>Renamed and uploaded additional folders and files to the Github repository</li> 
+            </ol>
+          
+            <h5>Creating the Home Page</h5>
+            <ol>
+              <li>Created a header that was applied to all the web pages. This involved specifying the links to different pages, modifying the link style to remain white and underlined when hovering, modifying the background color and body margin to make the header full screen, learning how to import external fonts (e.g., Google Fonts) for further customization, and figuring how to vertically center and horizontally -left and -right align the logo and tabs within the header container.</li>
+              <li>Created divs to group together content for the project images. This involved learning about flexbox, align-items, justify-content, and other styling properties.</li> 
+              <li>Creating divs to group the details of each project into interactive, colorful containers. This involved determining how to center the containers housing the content within the page, and centering the content within those containers. To add interactivity through hovering, I researched types of CSS transitions. I tested transitions with scale and text color changing on hover. I then proceeded with the CSS transition for scaling each project image while hovering. I also modified the project container divs to have a more polished look with color and rounded edges.</li> 
+              <li>Researched into creating hyperlinks within websites and modified the header links to ensure they properly move between the correct levels of subdirectories.</li>
+            </ol>
+            <div class="spacer"></div>
+            <div style="display: flex;justify-content:center">
+              <img src="/images/progress.png" style="width:auto;height:600px;">
+            </div>
+            <p style="text-align: center;"><i>Screenshots of Home Page design over time</i></p>
+
+          
+            <h5>Creating the Cheatsheets Page</h5>
+            <ol>
+              <li>Defined the styling for the page layout, such as spacing and indenting. This was to better distinguish between the different sections of content on the page (e.g., descriptions of the code v.s. the sample code itself).</li>
+              <li>Researched to get a refresher on styling buttons.</li> 
+              <li>Researched link properties, such as how to design links to open in a new tab.</li> 
+            </ol>
+
+            <h5>Creating the About Me Page</h5> 
+            <ol>
+              <li>Repurposed and modified CSS from the cheatsheets page, cheatsheets.css, to carry over consistent styling.</li>  
+              <li>Defined the styling of the page layout to center the image and bio description on the page.</li>  
+              <li>Researched and troubleshot pictures not loading when viewing the website live, rather than locally.</li> 
+            </ol>
+          
+            <h5>Creating the Reflection Page</h5>
+            <ol>
+              <li>Created CSS and HTML files for the page by modifying the cheatsheets.css file 
+              <li>Updated the header to include a reflections section across all website pages</li> 
+            </ol>
+
+            <h5>Styling across pages</h5> 
+            <ol>
+              <li>Made small style changes across pages, such as re-defining the link states of the header tabs to be underlined when currently on that page.</li> 
+            </ol> 
+
+            <p>Lastly, I created HTML files for each project to support adding the details of the projects throughout the course.</p>
+        </ol>
+        
+        <p>Throughout this process, I was also continuously committing changes throughout the cycle</p> 
+        
+        <div class="spacer-big"></div>
+        <h4>Issue</h4>
+        <p>One issue I encountered while making this website was with creating URLs to navigate between the different website pages. If accessing one of the tabs from a page other than the home page, one would get a 404 error. Looking at the URL in the web browser revealed that the paths were being stacked on each other, rather than being added after the domain name. Because I set up the directory to have a folder for the code associated with each page, the URLs needed to move up into the parent directories instead of going further down nonexistent subdirectories. I troubleshot this by reading through a Developer Mozilla HTML guide to <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks" target="_blank" class="a-2">creating hyperlinks</a>. I found that the URLs I created in the HTML files needed to be proceeded by two periods (..) to move back to the parent directory before accessing the sub-directories each page's code was under.</p>
+        
+        <div class="spacer-big"></div>
+        <h4>CSS Transition</h4>
+        <p>I applied a time-scaling CSS transition to the images associated with each project on the home page. When hovering over the image, the image's size increases by 10%.</p>
+        <p>I chose this transition because it would help to emphasize the visual content of each project to further grab users' attention.</p>
+        <p>To implement this CSS transition, I first researched the different types of CSS transitions and transition properties supported, such as through <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions" target="_blank" class="a-2">Mozilla Developer</a> and <a href="https://www.joshwcomeau.com/animation/css-transitions/" target="_blank" class="a-2">Josh W Comeau's CSS Transition guide</a>. I then attempted to create this transition. After finding that the image was not centering in the larger container of each project, I looked on Stackoverflow to see if anyone else had encountered a similar problem, including this <a href="https://stackoverflow.com/questions/28726430/css-how-to-scale-an-image-from-the-center-instead-of-top-left" target="_blank" class="a-2"></a>thread. The suggestions made for this thread didn't apply to my scenario. After exploring with the inspector developer tools of my website, I found that the problem had to do with the display flex and align-items properties of the overarching divs applied to the larger group of content including the image. With this knowledge, I was able to successfully center the project containers with the CSS transition applied to the images.</p>
+        <p>Below is a gif demonstrating this functionality.</p>
+        <div class="spacer"></div>
+        <div style="display: flex;justify-content:center">
+          <img src="./csstransitiondemo.gif" style="width:auto;height:300px;">
+        </div>
+        
+        <div class="spacer-big"></div>
+        <h4>Ideas and Future</h4>
+        <p>Some potential ideas and features toadd to the site in the future include:</p>
+        <ul>
+          <li>Making the project container elements responsively resize to the size of the browser. Currently, changing the browser size cuts off the parts of content from view.</li>  
+          <li>Adding additional indicators of which project is being hovered on within the home page, such as text-decoration for the project titles</li>
+          <li>Supporting additional user interaction, such as users being able to directly change the example code in the cheatsheets page</li>
+          <li>Adding a logo with CSS transitions to the header</li>
+          <li>Animating buttons with CSS transitions</li>
+        </ul>
+      </div>
+    </div>
+
+    </div>
+
+  </body>
+</html>
