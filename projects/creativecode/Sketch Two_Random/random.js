@@ -34,20 +34,24 @@ function draw() {
         type = OPEN;
       }
       print(type);
-      fill(215/ 2/ m, m, m);
+      fill(215 / m / 2, 3*m, m*40);
       // how to create arcs: https://p5js.org/reference/#/p5/arc
-      arc(pos + windowWidth/50, pos + 700, 100 - pos, 100 - pos, 0, PI + QUARTER_PI, type);
-      arc(windowWidth/5 + 800-pos, 500 - pos, 100 - pos, 100 - pos, 0, PI + QUARTER_PI, type);
-      arc(windowWidth/2 - pos*5, 500 - pos, 100 - pos, 100 - pos, 0, PI + QUARTER_PI, type);
+      arc(pos + windowWidth/50, pos + 700, 100 - pos, 100 - pos, pos, PI + QUARTER_PI, type);
+      arc(windowWidth/5 + 800-pos, 500 - pos, 100 - pos, 100 - pos, pos/8, PI + QUARTER_PI, type);
+      //fill(0, 0, 0);
+      arc(windowWidth/3 - pos*6, 500 - pos, 100 - pos, 100 - pos, pos/9, PI + QUARTER_PI, type);
+      arc(windowWidth, 800, 200 - pos, 200 - pos, 0, PI + QUARTER_PI, CHORD);
+      //fill(0, 0, 0);
+      arc(pos + windowWidth - 500, pos + 800, 100 - pos, 100 - pos, pos/10, PI + QUARTER_PI, type);
       
       
       fill(255/ m, m*10, m*31);
-      arc(windowWidth/6 + 500 - pos, 500 - pos, 300 - pos, 300 - pos, 0, PI + QUARTER_PI, type);
-      arc(windowWidth/3 + 850 - (pos/10), 100-(pos/10), 500 - pos, 500 - pos, 0, PI + QUARTER_PI, type);
+      arc(windowWidth/6 + 500 - pos, 500 - pos, 300 - pos, 300 - pos, pos/80, PI + QUARTER_PI, type);
+      arc(windowWidth/3 + 850 - (pos/10), 100-(pos/10), 500 - pos, 500 - pos, pos/10, PI + QUARTER_PI, type);
       
-      arc(windowWidth/10 + pos*2, 2*pos + 100, 150 - pos, 150 - pos, 0, PI + QUARTER_PI, type);
-      arc(windowWidth/4 + 9*pos, 800 - pos, 150 - pos, 150 - pos, 0, PI + QUARTER_PI, type);
+      arc(windowWidth/10 + pos*2, 2*pos + 100, 150 - pos, 150 - pos, pos/5, PI + QUARTER_PI, type);
+      arc(windowWidth/4 + 9*pos, 800 - pos, 150 - pos, 150 - pos, pos/9, PI + QUARTER_PI, type);
       
-      arc(400 - windowWidth/4, 400, 100, 100, 0, PI + QUARTER_PI, CHORD);
+      arc(400 - windowWidth/4, 400, 100, 100, pos/10, PI + QUARTER_PI, CHORD);
   }
 }
