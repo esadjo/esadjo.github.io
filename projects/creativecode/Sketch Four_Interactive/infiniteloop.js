@@ -15,3 +15,7 @@ function draw() {
     bezier(mouseY + i*3000, 0 + i*10, mouseX - 4000, mouseY - 1000, 0, 400, 1000, windowHeight + 1000);
   }
 }
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+}

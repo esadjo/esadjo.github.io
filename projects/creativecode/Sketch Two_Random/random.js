@@ -55,3 +55,7 @@ function draw() {
       arc(400 - windowWidth/4, 400, 100, 100, pos/10, PI + QUARTER_PI, CHORD);
   }
 }
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+}

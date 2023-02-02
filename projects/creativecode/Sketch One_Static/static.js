@@ -10,3 +10,8 @@ function draw() {
     bezier(windowHeight + i*100, i*100 - 5, i*700, 0, -1500, -1580, 80, windowHeight + 900);
   }
 }
+
+//https://p5js.org/reference/#/p5/windowResized
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+}
