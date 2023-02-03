@@ -1,7 +1,11 @@
 const randomim = document.getElementById("randomgen");
-randomim.addEventListener("mouseover", (e) => updateIm);
+const testing = document.getElementById("test");
+console.log(randomim);
+//console.log(testing);
+randomim.addEventListener("mouseenter", (e) => updateIm);
 
 function updateIm() {
+    console.log("Trying to update");
     //https://www.w3schools.com/jsref/jsref_random.asp
     let x = Math.random() * 9;
     if (x == 0) {
