@@ -5,65 +5,54 @@ let song;
 let player;
 
 function preload() {
-  song = loadSound('./audio/Clair_De_Lune_-_Aurbanni.mp3');
+  //song = loadSound('./audio/Clair_De_Lune_-_Aurbanni.mp3');
+  song = loadSound('./audio/Gymnopedie_1_Erik_Satie_-_Abydos_Musique.mp3');
 }
 
 function setup() {
   //song.play();
   createCanvas(windowWidth, windowHeight);
   background(0, 0, 0);
-  noStroke();
-  fill(178, 197, 214); //fill(73, 101, 128);
-  player = circle(windowWidth/2, windowHeight/2, 200);
 
-  fill(0, 8, 20);
-  triangle(windowWidth/2 - 30, windowHeight/2 + 40, windowWidth/2 - 30, windowHeight/2 - 40, windowWidth/2 + 40, windowHeight/2 - 0);
-       
-  //triangle(windowWidth/2 - 30, windowHeight/2 + 40, windowWidth/2 - 30, windowHeight/2 - 40, windowWidth/2 + 40, windowHeight/2 - 0);
-  //player.mouseOver(cursor);
-  //circle(windowWidth/2 + 50, windowHeight/2 + 50, 0.5);
-  //circle(windowWidth/2 - 50, windowHeight/2 - 50, 0.5);
-  //circle(windowWidth/2 - 40, windowHeight/2 + 40, 0.5);
-  //circle(windowWidth/2 + 50, windowHeight/2 - 50, 0.5);
 }
-let circle1;
-let circle2; 
-let circle3; 
-let circle4;
+
 
 //https://p5js.org/reference/#/p5/noise
 let size;
 
 function draw() {
-  background(255, 255, 255);
+  //background(255, 255, 255);
+  background(222, 231, 249);
+
+  fill(184, 203, 238);
+  circle(windowWidth/4, windowHeight/4, 50);
+  circle(windowWidth/7, windowHeight/4*3, 200);
+  circle(windowWidth, windowHeight, 700);
+  circle(windowWidth/7*6, windowHeight/4, 250);
+  circle(0, 0, 700);
+
   //let n = noise(xoff) * width;
   let n = mouseY;
   //line(0, n, windowWidth, n);
   noStroke();
 
-  fill(-mouseY/2 + 50, 100 - 4*mouseY, -mouseY + 250);
+  fill(-mouseY/2 + 50, 100 - 4*mouseY, -mouseY/8 + 250);
 
   size = windowHeight*7/8 - mouseY/1.5 + mouseX/1.5;
   circle(windowWidth/2, windowHeight/2, size);
 
-  // Testing
-/*
-circle1 = circle(windowWidth*1/5, windowHeight*7/8, 100);
-circle2 = circle(windowWidth*2/5, windowHeight*7/8, 100);
-circle3 = circle(windowWidth*3/5, windowHeight*7/8, 100);
-circle4 = circle(windowWidth*4/5, windowHeight*7/8, 100);
-*/
-/*
-circle1.mouseOver(song.setVolume(0.2, 2));
-circle2.mouseOver(song.setVolume(0.5, 2));
-circle3.mouseOver(song.setVolume(0.8, 2));
-circle4.mouseOver(song.setVolume(1, 2));
-*/ 
 
-if (size > windowWidth /2 ) { 
-  song.setVolume(1, 2);
+console.log(size);
+if (size > windowWidth) { 
+  song.setVolume(1, 0.1);
+} else if (size > windowWidth / 4 * 3) {
+  song.setVolume(0.75, 0.1);
+} else if (size > windowWidth / 4 * 2) {
+  song.setVolume(0.50, 0.1);
+} else if (size > windowWidth / 4 * 1) {
+  song.setVolume(0.25, 0.1);
 } else {
-  song.setVolume(0, 2);
+  song.setVolume(0, 0.1);
 }
 
 }
