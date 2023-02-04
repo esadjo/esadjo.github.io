@@ -60,11 +60,18 @@
   font-size: 25px;
 }
 
+
 h1 {
   font-family: 'ABeeZee', sans-serif;
   color: #1C4A6E;
   font-weight: bold;
-  font-size: 60px;
+  font-size: 50px;
+}
+
+h2 {
+  font-family: 'ABeeZee', sans-serif;
+  font-weight: bold;
+  font-size: 40px;
 }
 
 .a-2 {
@@ -76,12 +83,7 @@ h1 {
   font-weight: bold;
 }
 
-h2 {
-  font-family: 'ABeeZee', sans-serif;
-  color: #1C4A6E;
-  font-weight: bold;
-  font-size: 30px;
-}
+
 
 h3 {
   font-family: 'ABeeZee', sans-serif;
