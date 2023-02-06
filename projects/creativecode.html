@@ -1,0 +1,103 @@
+     <html>
+        <head>
+          <link rel="stylesheet" href="./projects.css"/>
+        </head>
+        <body>
+          <div class="page-container"> 
+            <div class="header" style="background-color: #7145AB;">
+              <h1 class="logo"><a href="../index.html">Emma Sadjo 438 Portfolio</a></h1> 
+              <div class="sub-pages">
+                <h2 class="header-2"><u><a href="../cheatsheets/cheatsheets.html">Cheatsheets</a></u></h2>
+                <h2 class="header-2"><a href="../about/about-me.html">About me</a></h2>
+                
+              </div>
+            </div>
+      
+            <div class="page-container-2" style="background-color: #F2E8FF;">
+              <!--<div class="rectangle-container" style="background-color: rgb(251, 216, 216);">-->  
+                <div class="project">
+                  <a href="./projects/finalproject.html">
+                    <img
+                      class="picture-title"
+                      src="/images/creativecodedisplay.png"
+                      alt="A question mark shaped red neon sign"
+                      /> 
+                  </a>
+                  <div class="project-description">
+                    <h1 style="color:#7145AB">Creative Coding</h1>
+                    <div class="p2">A series of sketches utilizing the P5.js and P5.sound libraries to create visual and audio artworks.</div>
+                  </div>
+                </div>
+              <!--</div>-->
+            </div>
+            </div>
+      
+            <div class="project-container">
+            
+            <div class="content-container">
+              <h2 style="color:#7145AB">Overview and Usage</h2>
+              <p>The core functionality of the sketches is that users can view six artworks in full-webpage mode. Some of them have built in interactivity where the visualization and/or audio changes based on user input, such as their mouse position, with others will generate random visualizations each time they are opened.</p>
+              <p>The specifics of each sketch functionality are:</p>
+              <ol>
+                <li>Sketch One: A static blue-gradient organic-arch shaped piece of artwork is generated</li>
+                <li>Sketch Two: A piece of artwork with partial circles is generated. The circles have randomly generated positions, sizes, angles, and colors. The background is also randomly generated. When the web-page is refreshed, another piece of artwork is randomly generated.</li> 
+                <li>Sketch Three: A infinite-loop piece of artwork is generated; a fluid pink-purple-blue wave moves across the screen without stop.</li> 
+                <li>Sketch Four: A fluid gradient arch piece of artwork is modified by users' mouse position. The arch lines move based on the x and y position of a user's mouse, and the color changes based on the x-position of their mouse. When the x-position of the mouse is low (on the left side of the screen), the artwork turns to a pink-purple. When the mouse is at a high x-position (on the right side fo the screen), the color turns to a blue.</li> 
+                <li>Sketch Five: An audio-based artwork where when a user clicks on the play button, Clair De La Lune starts playing and the audio player button lights up to a yellow color and the background lightens.</li>
+                <li>Sketch Six: A visual and audio-based artwork where users can click anywhere on the screen to play and pause Gymnopedie 1. Users can move their cursor around the screen to increase and decrease the size of the bright blue circle in the middle of the screen. This circle controls the volume of the music. As the user manipulates the circle to decrease in size, the music volume goes down, and when they increase the circle size, the volume gets louder. The center circle's hue reflects the volume level, where when the circle is smaller and the music is quieter, the circle turns to a darker blue. When the circle gets bigger and the volume gets louder, the circle turns to a brighter blue.</li>  
+              </ol>
+                
+              <div class="spacer"></div>
+              <div style="display: flex;justify-content:center">
+                  <img src="/images/creativecodedemo.gif" style="width:auto;height:550px; margin-right:50px;">
+              </div>
+              <div style="display: flex;justify-content:center">
+                <p><i>Preview of 6 sketches in action.</i></p>
+              </div>
+      
+              <div class="spacer"></div>
+      
+      
+              <h2 style="color:#7145AB">Development Process</h2>
+              <p>The steps I took for this project included:</p>
+              <ol>
+                <li>Setting up a <a href="https://editor.p5js.org/" target="_blank" class="a-2">P5.js web editor</a> account to run the code involving P5.js library without having to set up my coding environment to access the library and run the code locally.</li>
+                <li>Researched the functionalities supported by the P5.js library through the <a href="https://p5js.org/reference/" target="_blank" class="a-2">Reference page</a>.</li> 
+                <li>I first ideated what each sketch would entail and then I then picked out functions from the Reference page that could be leveraged to created those visualizations.</li> 
+                <li>I first wrote the code for setting up the canvas elements and then wrote the code for draw() and any other functions that needed to be defined and called within the setup() and draw() functions.</li>
+                <li> I tested each sketch along the way in the preview view of the p5.js web editor.</li>
+                <li>I repeated this process of each of the six sketches, going in order from the first sketch to the 6 sketch.</li> 
+                <li>Once I got to Sketch Five, I transfered the code I had created in the p5.js web editor into javascript and html files within my HCDE 438 portfolio to access and run local audio files. This involved defining the head and body scripts of each html page associated with each sketch.</li> 
+                <li>I then set up the gallery page and used flex box properties to make the page layout responsive to window size.</li>
+              </ol>
+              <div class="spacer">
+                <div style="display: flex;justify-content:center">
+                  <img src="/images/screenshots of progress web extension.png" style="width:1300px;height:auto;">
+                </div>
+              </div>
+      
+              <div class="spacer"></div>
+      
+              <h2 style="color:#7145AB">Issue Deep-Dive</h2>
+              <p>..</p>
+              <div class="spacer"></div>
+      
+              <h2 style="color:#7145AB">Ideas and Future Work</h2>
+              <p>Some ideas I might consider implementing in the future include:</p>
+              <ul>
+                <li>Modifing the artworks to allow for user customization. For example, users could specify which colors they want displayed in the artwork. Alternative, users could choose from a set list of color schemes.</li> 
+                <li>Supporting the download of the artworks as a background screen for one's computer or code.</li>
+                <li>Allowing users to choose between multiple audio files to play for the audio-based sketches.</li>
+                <li>Allowing users to toggle the interactivity of the sketches on and off. This means supporting all of the sketches in both static and interactive modes.</li>
+                <li>Modifying the sketches to have more of an overarching theme. For example, connecting them all with an organic, arch-like gradient theme for cohesion and consistency.</li>
+              </ul>
+              <div class="spacer"></div>
+              
+              <h2 style="color:#7145AB">Kudos</h2>
+              <p>[FINISH!!!] When creating this browser extension, I pulled code from <a href="https://www.w3schools.com/howto/howto_css_switch.asp" target="_blank" class="a-2">W3Schools</a> to ....</p>
+              <p>I got the audio from ____ </p>
+            </div>
+          </div>
+      
+        </body>
+      </html>
