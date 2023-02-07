@@ -36,15 +36,15 @@
             
             <div class="content-container">
               <h2 style="color:#7145AB">Overview and Usage</h2>
-              <p>The core functionality of the sketches is that users can view six artworks in full-webpage mode. Some of them have built in interactivity where the visualization and/or audio changes based on user input, such as their mouse position, with others will generate random visualizations each time they are opened.</p>
+              <p>The core functionality of the sketches is that users can view six artworks in full-webpage mode. Some of them have built-in interactivity where the visualization and/or audio changes based on user input, such as their mouse position, with others will generate random visualizations each time they are opened.</p>
               <p>The specifics of each sketch functionality are:</p>
               <ol>
-                <li>Sketch One: A static blue-gradient organic-arch shaped piece of artwork is generated</li>
-                <li>Sketch Two: A piece of artwork with partial circles is generated. The circles have randomly generated positions, sizes, angles, and colors. The background is also randomly generated. When the web-page is refreshed, another piece of artwork is randomly generated.</li> 
-                <li>Sketch Three: A infinite-loop piece of artwork is generated; a fluid pink-purple-blue wave moves across the screen without stop.</li> 
-                <li>Sketch Four: A fluid gradient arch piece of artwork is modified by users' mouse position. The arch lines move based on the x and y position of a user's mouse, and the color changes based on the x-position of their mouse. When the x-position of the mouse is low (on the left side of the screen), the artwork turns to a pink-purple. When the mouse is at a high x-position (on the right side fo the screen), the color turns to a blue.</li> 
+                <li>Sketch One: A static blue-gradient organic-arch-shaped artwork is generated</li>
+                <li>Sketch Two: A piece of artwork with partial circles is generated. The circles have randomly generated positions, sizes, angles, and colors. The background is also randomly generated. When the web page is refreshed, another piece of artwork is randomly generated.</li> 
+                <li>Sketch Three: A infinite-loop piece of artwork is generated; a fluid pink-purple-blue wave moves across the screen without stopping.</li> 
+                <li>Sketch Four: A fluid gradient arch piece of artwork is modified by a user's mouse position. The arch lines move based on the x and y position of a user's mouse, and the color changes based on the x-position of their mouse. When the x-position of the mouse is low (on the left side of the screen), the artwork turns to a pink-purple. When the mouse is at a high x-position (on the right side of the screen), the color turns blue.</li> 
                 <li>Sketch Five: An audio-based artwork where when a user clicks on the play button, Clair De La Lune starts playing and the audio player button lights up to a yellow color and the background lightens.</li>
-                <li>Sketch Six: A visual and audio-based artwork where users can click anywhere on the screen to play and pause Gymnopedie 1. Users can move their cursor around the screen to increase and decrease the size of the bright blue circle in the middle of the screen. This circle controls the volume of the music. As the user manipulates the circle to decrease in size, the music volume goes down, and when they increase the circle size, the volume gets louder. The center circle's hue reflects the volume level, where when the circle is smaller and the music is quieter, the circle turns to a darker blue. When the circle gets bigger and the volume gets louder, the circle turns to a brighter blue.</li>  
+                <li>Sketch Six: A visual and audio-based artwork where users can click anywhere on the screen to play and pause Gymnopedie 1. Users can move their cursor around the screen to increase and decrease the size of the bright blue circle in the middle of the screen. This circle controls the volume of the music. As the user manipulates the circle to decrease in size, the music volume goes down, and the volume gets louder when they increase the circle size. The center circle's hue reflects the volume level, whereas when the circle is smaller and the music is quieter, the circle turns to a darker blue. When the circle gets bigger and the volume gets louder, the circle turns to a brighter blue.</li>  
               </ol>
                 
               <div class="spacer"></div>
@@ -63,13 +63,13 @@
               <ol>
                 <li>Setting up a <a href="https://editor.p5js.org/" target="_blank" class="a-2">P5.js web editor</a> account to run the code involving P5.js library without having to set up my coding environment to access the library and run the code locally.</li>
                 <li>Researching the functionalities supported by the P5.js library through the <a href="https://p5js.org/reference/" target="_blank" class="a-2">Reference page</a>.</li> 
-                <li>Ideateing what each sketch would entail and then picking out functions from the Reference page that could be leveraged to created those visualizations.</li> 
+                <li>Ideating what each sketch would entail and then picking out functions from the Reference page that could be leveraged to create those visualizations.</li> 
                 <li>Writing the code for setting up the canvas elements and then writing the code for draw() and any other functions that needed to be defined and called within the setup() and draw() functions.</li>
                 <li>Testing each sketch along the way in the preview view of the p5.js web editor.</li>
                 <li>Debugging any errors in the code by using the console and inspecting the page with the web browser tools.</li>
-                <li>I repeated this process of each of the six sketches, going in order from the first sketch to the 6 sketch.</li> 
-                <li>Once I got to Sketch Five, I transfered the code I had created in the p5.js web editor into javascript and html files within my HCDE 438 portfolio to access and run local audio files. This involved defining the head and body scripts of each html page associated with each sketch.</li> 
-                <li>I then set up the gallery page and used flex box properties to make the page layout responsive to window size.</li>
+                <li>I repeated this process for each of the six sketches, going in order from the first sketch to the sixth sketch.</li> 
+                <li>Once I got to Sketch Five, I transferred the code I had created in the p5.js web editor into javascript and html files within my HCDE 438 portfolio to access and run local audio files. This involved defining the head and body scripts of each html page associated with each sketch.</li> 
+                <li>I then set up the gallery page and used flexbox properties to make the page layout responsive to window size.</li>
               </ol>
               <div class="spacer">
                 <div style="display: flex;justify-content:center">
@@ -80,13 +80,13 @@
               <div class="spacer"></div>
       
               <h2 style="color:#7145AB">Issue Deep-Dive</h2>
-              <p>One logic error I ran into involved the play function of the p5.sound library. For the last sketch, Sketch 6 (Audio and Visuals). When I first added the play() function to this sketch, I added it within the draw() function instead of mousePressed() function. This caused the animations that were previously respnsive to break and the whole page was frozen. After talking to the professor, I learned that calling the play function in draw() can cause the page to break because of how many times the play() function would be called there. I then transfered the if statements involving the play() function to be within the mousePressed() function, which resolved the issue.</p>
+              <p>One logic error I ran into involved the play function of the p5.sound library. For the last sketch, Sketch 6 (Audio and Visuals). When I first added the play() function to this sketch, I added it within the draw() function instead of mousePressed() function. This caused the animations that were previously responsive to break and the whole page was frozen. After talking to the professor, I learned that calling the play function in draw() can cause the page to break because of how many times the play() function would be called there. I then transferred the if statements involving the play() function to be within the mousePressed() function, which resolved the issue.</p>
               <div class="spacer"></div>
       
               <h2 style="color:#7145AB">Ideas and Future Work</h2>
               <p>Some ideas I might consider implementing in the future include:</p>
               <ul>
-                <li>Modifing the artworks to allow for user customization. For example, users could specify which colors they want displayed in the artwork. Alternative, users could choose from a set list of color schemes.</li> 
+                <li>Modifying the artwork to allow for user customization. For example, users could specify which colors they want displayed in the artwork. Alternatively, users could choose from a set list of color schemes.</li> 
                 <li>Supporting the download of the artworks as a background screen for one's computer or code.</li>
                 <li>Allowing users to choose between multiple audio files to play for the audio-based sketches.</li>
                 <li>Allowing users to toggle the interactivity of the sketches on and off. This means supporting all of the sketches in both static and interactive modes.</li>
@@ -96,7 +96,7 @@
               
               <h2 style="color:#7145AB">Kudos</h2>
               <p>When creating this browser extension, I read up on different P5.js and P5.sound functions and examples within the <a href="https://p5js.org/reference/" target="_blank" class="a-2">p5.js reference page</a> to learn about, for example, the functions <a href="https://p5js.org/reference/#/p5/random" target="_blank" class="a-2">random()</a>, <a href="https://p5js.org/reference/#/p5/arc" target="_blank" class="a-2">arc()</a>, <a href="https://p5js.org/examples/form-star.html" target="_blank" class="a-2">rotate()</a>. Additionally, I built off of the <a href="https://p5js.org/examples/sound-load-and-play-sound.html" target="_blank" class="a-2">Load and Play Sound</a> example code for my fifth and sixth sketches, which involved audio.</p>
-              <p>I also got the audio from used in Sketches Five and Six from Jamendo Music from <a href="https://www.jamendo.com/track/1876634/clair-de-lune" target="_blank" class="a-2">Clair De Lune</a> and <a href="https://www.jamendo.com/track/1460166/gymnopedie-1-erik-satie" target="_blank" class="a-2">Gymnopedie 1</a>.</p>
+              <p>I also got the audio used in Sketches Five and Six from Jamendo Music from <a href="https://www.jamendo.com/track/1876634/clair-de-lune" target="_blank" class="a-2">Clair De Lune</a> and <a href="https://www.jamendo.com/track/1460166/gymnopedie-1-erik-satie" target="_blank" class="a-2">Gymnopedie 1</a>.</p>
             </div>
           </div>
       
