@@ -20,7 +20,7 @@
                     <img
                       class="picture-title"
                       src="/images/creativecodedisplay.png"
-                      alt="A question mark shaped red neon sign"
+                      alt="..."
                       /> 
                   </a>
                   <div class="project-description">
@@ -62,24 +62,25 @@
               <p>The steps I took for this project included:</p>
               <ol>
                 <li>Setting up a <a href="https://editor.p5js.org/" target="_blank" class="a-2">P5.js web editor</a> account to run the code involving P5.js library without having to set up my coding environment to access the library and run the code locally.</li>
-                <li>Researched the functionalities supported by the P5.js library through the <a href="https://p5js.org/reference/" target="_blank" class="a-2">Reference page</a>.</li> 
-                <li>I first ideated what each sketch would entail and then I then picked out functions from the Reference page that could be leveraged to created those visualizations.</li> 
-                <li>I first wrote the code for setting up the canvas elements and then wrote the code for draw() and any other functions that needed to be defined and called within the setup() and draw() functions.</li>
-                <li> I tested each sketch along the way in the preview view of the p5.js web editor.</li>
+                <li>Researching the functionalities supported by the P5.js library through the <a href="https://p5js.org/reference/" target="_blank" class="a-2">Reference page</a>.</li> 
+                <li>Ideateing what each sketch would entail and then picking out functions from the Reference page that could be leveraged to created those visualizations.</li> 
+                <li>Writing the code for setting up the canvas elements and then writing the code for draw() and any other functions that needed to be defined and called within the setup() and draw() functions.</li>
+                <li>Testing each sketch along the way in the preview view of the p5.js web editor.</li>
+                <li>Debugging any errors in the code by using the console and inspecting the page with the web browser tools.</li>
                 <li>I repeated this process of each of the six sketches, going in order from the first sketch to the 6 sketch.</li> 
                 <li>Once I got to Sketch Five, I transfered the code I had created in the p5.js web editor into javascript and html files within my HCDE 438 portfolio to access and run local audio files. This involved defining the head and body scripts of each html page associated with each sketch.</li> 
                 <li>I then set up the gallery page and used flex box properties to make the page layout responsive to window size.</li>
               </ol>
               <div class="spacer">
                 <div style="display: flex;justify-content:center">
-                  <img src="/images/screenshots of progress web extension.png" style="width:1300px;height:auto;">
+                  <img src="/images/progressscreenshotscreativecode_sketch6.png" style="width:1300px;height:auto;">
                 </div>
               </div>
       
               <div class="spacer"></div>
       
               <h2 style="color:#7145AB">Issue Deep-Dive</h2>
-              <p>..</p>
+              <p>One logic error I ran into involved the play function of the p5.sound library. For the last sketch, Sketch 6 (Audio and Visuals). When I first added the play() function to this sketch, I added it within the draw() function instead of mousePressed() function. This caused the animations that were previously respnsive to break and the whole page was frozen. After talking to the professor, I learned that calling the play function in draw() can cause the page to break because of how many times the play() function would be called there. I then transfered the if statements involving the play() function to be within the mousePressed() function, which resolved the issue.</p>
               <div class="spacer"></div>
       
               <h2 style="color:#7145AB">Ideas and Future Work</h2>
@@ -94,8 +95,8 @@
               <div class="spacer"></div>
               
               <h2 style="color:#7145AB">Kudos</h2>
-              <p>[FINISH!!!] When creating this browser extension, I pulled code from <a href="https://www.w3schools.com/howto/howto_css_switch.asp" target="_blank" class="a-2">W3Schools</a> to ....</p>
-              <p>I got the audio from ____ </p>
+              <p>When creating this browser extension, I read up on different P5.js and P5.sound functions and examples within the <a href="https://p5js.org/reference/" target="_blank" class="a-2">p5.js reference page</a> to learn about, for example, the functions <a href="https://p5js.org/reference/#/p5/random" target="_blank" class="a-2">random()</a>, <a href="https://p5js.org/reference/#/p5/arc" target="_blank" class="a-2">arc()</a>, <a href="https://p5js.org/examples/form-star.html" target="_blank" class="a-2">rotate()</a>. Additionally, I built off of the <a href="https://p5js.org/examples/sound-load-and-play-sound.html" target="_blank" class="a-2">Load and Play Sound</a> example code for my fifth and sixth sketches, which involved audio.</p>
+              <p>I also got the audio from used in Sketches Five and Six from Jamendo Music from <a href="https://www.jamendo.com/track/1876634/clair-de-lune" target="_blank" class="a-2">Clair De Lune</a> and <a href="https://www.jamendo.com/track/1460166/gymnopedie-1-erik-satie" target="_blank" class="a-2">Gymnopedie 1</a>.</p>
             </div>
           </div>
       
