@@ -36,16 +36,19 @@
             
             <div class="content-container">
               <h2 style="color:#7145AB">Overview and Usage</h2>
-              <p>The core functionality of the sketches is that users can view six artworks in full-webpage mode. Some of them have built-in interactivity where the visualization and/or audio changes based on user input, such as their mouse position, with others will generate random visualizations each time they are opened.</p>
+              <p>The core functionality of the sketches is that users can view six artworks in full-webpage mode. Some of them have built-in interactivity where the visualization and/or audio changes based on user input, such as their mouse position, while others will generate random visualizations each time they are opened.</p>
               <p>The specifics of each sketch functionality are:</p>
               <ol>
-                <li>Sketch One: A static blue-gradient organic-arch-shaped artwork is generated</li>
+                <li>Sketch One: A static blue-gradient organic-arch-shaped artwork is generated.</li>
                 <li>Sketch Two: A piece of artwork with partial circles is generated. The circles have randomly generated positions, sizes, angles, and colors. The background is also randomly generated. When the web page is refreshed, another piece of artwork is randomly generated.</li> 
                 <li>Sketch Three: A infinite-loop piece of artwork is generated; a fluid pink-purple-blue wave moves across the screen without stopping.</li> 
                 <li>Sketch Four: A fluid gradient arch piece of artwork is modified by a user's mouse position. The arch lines move based on the x and y position of a user's mouse, and the color changes based on the x-position of their mouse. When the x-position of the mouse is low (on the left side of the screen), the artwork turns to a pink-purple. When the mouse is at a high x-position (on the right side of the screen), the color turns blue.</li> 
                 <li>Sketch Five: An audio-based artwork where when a user clicks on the play button, Clair De La Lune starts playing and the audio player button lights up to a yellow color and the background lightens.</li>
-                <li>Sketch Six: A visual and audio-based artwork where users can click anywhere on the screen to play and pause Gymnopedie 1. Users can move their cursor around the screen to increase and decrease the size of the bright blue circle in the middle of the screen. This circle controls the volume of the music. As the user manipulates the circle to decrease in size, the music volume goes down, and the volume gets louder when they increase the circle size. The center circle's hue reflects the volume level, whereas when the circle is smaller and the music is quieter, the circle turns to a darker blue. When the circle gets bigger and the volume gets louder, the circle turns to a brighter blue.</li>  
+                <li>Sketch Six: A visual and audio-based artwork where users can click anywhere on the screen to play and pause Gymnopedie 1. Users can move their cursor around the screen to increase and decrease the size of the bright blue circle in the middle of the screen. This circle controls the volume of the music. As the user manipulates the circle to decrease in size, the music volume goes down, and the volume gets louder when they increase the circle size. The center circle's hue reflects the volume level; when the circle is smaller and the music is quieter, the circle turns to a darker blue. When the circle gets bigger and the volume gets louder, the circle turns to a brighter blue.</li>  
               </ol>
+
+              <p>You can access the live gallery with the sketches here:</p>
+              <button style="background-color: #421E73; border: 2px solid #421E73;"><a href="https://esadjo.github.io/projects/creativecode/gallery/gallery.html" target="_blank" style="text-decoration: none;">View Sketch Gallery</a></button>
                 
               <div class="spacer"></div>
               <div style="display: flex;justify-content:center">
@@ -61,7 +64,7 @@
               <h2 style="color:#7145AB">Development Process</h2>
               <p>The steps I took for this project included:</p>
               <ol>
-                <li>Setting up a <a href="https://editor.p5js.org/" target="_blank" class="a-2">P5.js web editor</a> account to run the code involving P5.js library without having to set up my coding environment to access the library and run the code locally.</li>
+                <li>Setting up a <a href="https://editor.p5js.org/" target="_blank" class="a-2">P5.js web editor</a> account to run the code using the P5.js library without having to set up my coding environment to access the library and run the code locally.</li>
                 <li>Researching the functionalities supported by the P5.js library through the <a href="https://p5js.org/reference/" target="_blank" class="a-2">Reference page</a>.</li> 
                 <li>Ideating what each sketch would entail and then picking out functions from the Reference page that could be leveraged to create those visualizations.</li> 
                 <li>Writing the code for setting up the canvas elements and then writing the code for draw() and any other functions that needed to be defined and called within the setup() and draw() functions.</li>
@@ -74,13 +77,17 @@
               <div class="spacer">
                 <div style="display: flex;justify-content:center">
                   <img src="/images/progressscreenshotscreativecode_sketch6.png" style="width:1300px;height:auto;">
+                  
+                </div>
+                <div style="display: flex;justify-content:center">
+                  <p><i>Example of process for creating a sketch (Sketch Six).</i></p>
                 </div>
               </div>
       
               <div class="spacer"></div>
       
               <h2 style="color:#7145AB">Issue Deep-Dive</h2>
-              <p>One logic error I ran into involved the play function of the p5.sound library. For the last sketch, Sketch 6 (Audio and Visuals). When I first added the play() function to this sketch, I added it within the draw() function instead of mousePressed() function. This caused the animations that were previously responsive to break and the whole page was frozen. After talking to the professor, I learned that calling the play function in draw() can cause the page to break because of how many times the play() function would be called there. I then transferred the if statements involving the play() function to be within the mousePressed() function, which resolved the issue.</p>
+              <p>One logic error I ran into involved the play function of the p5.sound library. For the last sketch, Sketch 6 (Audio and Visuals). When I first added the play() function to this sketch, I added it within the draw() function instead of mousePressed() function. This caused the animations that were previously responsive to break and the whole page became frozen. After talking to the professor, I learned that calling the play function in draw() can cause the page to break because of how many times the play() function would be called there. I then transferred the if statements involving the play() function to be within the mousePressed() function, which resolved the issue.</p>
               <div class="spacer"></div>
       
               <h2 style="color:#7145AB">Ideas and Future Work</h2>
@@ -90,12 +97,12 @@
                 <li>Supporting the download of the artworks as a background screen for one's computer or code.</li>
                 <li>Allowing users to choose between multiple audio files to play for the audio-based sketches.</li>
                 <li>Allowing users to toggle the interactivity of the sketches on and off. This means supporting all of the sketches in both static and interactive modes.</li>
-                <li>Modifying the sketches to have more of an overarching theme. For example, connecting them all with an organic, arch-like gradient theme for cohesion and consistency.</li>
+                <li>Modifying the sketches to have more of an overarching theme. For example, the sketches could be connected through an organic, arch-like gradient theme for cohesion and consistency.</li>
               </ul>
               <div class="spacer"></div>
               
               <h2 style="color:#7145AB">Kudos</h2>
-              <p>When creating this browser extension, I read up on different P5.js and P5.sound functions and examples within the <a href="https://p5js.org/reference/" target="_blank" class="a-2">p5.js reference page</a> to learn about, for example, the functions <a href="https://p5js.org/reference/#/p5/random" target="_blank" class="a-2">random()</a>, <a href="https://p5js.org/reference/#/p5/arc" target="_blank" class="a-2">arc()</a>, <a href="https://p5js.org/examples/form-star.html" target="_blank" class="a-2">rotate()</a>. Additionally, I built off of the <a href="https://p5js.org/examples/sound-load-and-play-sound.html" target="_blank" class="a-2">Load and Play Sound</a> example code for my fifth and sixth sketches, which involved audio.</p>
+              <p>When creating this browser extension, I read up on different P5.js and P5.sound functions and examples within the <a href="https://p5js.org/reference/" target="_blank" class="a-2">p5.js reference page</a> to learn about, for example, the functions <a href="https://p5js.org/reference/#/p5/bezier" target="_blank" class="a-2">bezier</a>, <a href="https://p5js.org/reference/#/p5/random" target="_blank" class="a-2">random()</a>, <a href="https://p5js.org/reference/#/p5/arc" target="_blank" class="a-2">arc()</a>, and <a href="https://p5js.org/examples/form-star.html" target="_blank" class="a-2">rotate()</a>. Additionally, I built off of the <a href="https://p5js.org/examples/sound-load-and-play-sound.html" target="_blank" class="a-2">Load and Play Sound</a> example code for my fifth and sixth sketches, which involved audio.</p>
               <p>I also got the audio used in Sketches Five and Six from Jamendo Music from <a href="https://www.jamendo.com/track/1876634/clair-de-lune" target="_blank" class="a-2">Clair De Lune</a> and <a href="https://www.jamendo.com/track/1460166/gymnopedie-1-erik-satie" target="_blank" class="a-2">Gymnopedie 1</a>.</p>
             </div>
           </div>
