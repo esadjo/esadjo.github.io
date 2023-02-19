@@ -13,13 +13,13 @@
         </div>
       </div>
 
-      <div class="page-container-2" style="background-color: #F3D4D2;">
+      <div class="page-container-2" style="background-color: #EFD2CF;">
         <!--<div class="rectangle-container" style="background-color: rgb(251, 216, 216);">-->  
           <div class="project">
             <a href="./projects/finalproject.html">
               <img
                 class="picture-title"
-                src="/images/creativecodedisplay.png"
+                src="/images/gameim.png"
                 alt="..."
                 /> 
             </a>
@@ -36,18 +36,40 @@
       
       <div class="content-container">
         <h2 style="color:#8B2019">Overview and Usage</h2>
-        <p>The core functionality .....</p>
+        <p>The core functionality of this project is that in the game, users control a blue balloon. Using the arrow controller keys on their keyboard, users can move the ballon left, right, up, and down at a set speed. If the balloon moves off the page, it appears on the other side (left to right side of screen, top to bottom of screen, and vice versa) to keep the player in the game. Meanwhile, fireballs rotating at different speeds move across the screen, which the user has to avoid. If the user's balloon gets hit by a fireball, then the balloon expands. If the score reaches 35 hits, the game is over.</p>
+        <p>Smaller functionalities included in this game are that the background is responsive. As the balloon acquires more hits and expands, the background red arches further shift to the right side of the screen. The game includes instructions in the center bottom of the screen to guide users at the beginning of the game and disappears after the users begins the game and has a score of 2 hits. Additionally, another functionality is that users can click anywhere on the screen to play or pause the game background music. By default, the music is off. The sound icon in the top right corner updates to show which sound state is selected.</p>
 
-        <p>You can access ....</p>
-        <button style="background-color: #5A0F0A; border: 2px solid #5A0F0A;"><a href="https://esadjo.github.io/projects/creativecode/gallery/gallery.html" style="text-decoration: none;">View Sketch Gallery</a></button>
+        <p>You can access the game below:</p>
+        <button style="background-color: #5A0F0A; border: 2px solid #5A0F0A;"><a href="https://esadjo.github.io/dev-toolchain-game/" style="text-decoration: none;">View Game</a></button>
           
         <div class="spacer"></div>
-        <div style="display: flex;justify-content:center">
-            <img src="/images/creativecodedemo.gif" style="width:auto;height:550px; margin-right:50px;">
+
+        <div class="gallery-center">
+          <div class="container-gallery">
+              
+              <div class="column">
+                <img src="/images/usingKeysNavigating.gif" class="picture-gif">
+                <div style="display: flex;justify-content:center"><p><i>User moving blue balloon using arrow keys.</i></p></div>
+              </div>
+              
+              <div class="column">
+                <img src="/images/reappearingBalloon.gif" class="picture-gif">
+                <div style="display: flex;justify-content:center"><p><i>Balloon reappearing on opposite side when leave screen.</i></p></div>
+              </div>
+
+              <div class="column">
+                <img src="/images/balloonExpanding.gif" class="picture-gif">
+                <div style="display: flex;justify-content:center"><p><i>Balloon expanding as hit by fireballs.</i></p></div>
+              </div>
+
+              <div class="column">
+                <img src="/images/gameOver.gif" class="picture-gif">
+                <div style="display: flex;justify-content:center"><p><i>Game ending after score of hits reaches 35.</i></p></div>
+              </div>
+
+          </div>
         </div>
-        <div style="display: flex;justify-content:center">
-          <p><i>....</i></p>
-        </div>
+
 
         <div class="spacer"></div>
 
@@ -55,11 +77,11 @@
         <h2 style="color:#8B2019">Development Process</h2>
         <p>The steps I took for this project included:</p>
         <ol>
-          <li>...</li>
-          <li>...</li>
-          <li>...</li>
-          <li>...</li>
-          <li>...</li>
+          <li>Following in-class activity to install libraries  [ https://github.com/branchwelder/web-technologies/blob/main/activities/06_toolchain.md ]</li>
+          <li>Reading up on P5.play functions at [ADD LINK]</li>
+          <li>Going through examples in [ADD Link] and observing which P5.play functions they leveraged to create their interactions and animations. In the Kudos section, I specify which examples I studied in particular.</li>
+          <li>Building out the most basic functionality and then working ways up. First getting the creating sprite for the player and having it controlled by the arrow keys. Then adding the fireballs and defining their moving behavior. Then writing the code to make the balloon expand when it overlaps with the fireballs. Then adding background effects like the background arches moving right as the number of hits increase. Then adding visual elements such as the score number of hits at the top, and then the sound arrow. I focused on working on the elements involving p5 and p5.play first, and then worked on adding the sound elements with p5.sound.</li>
+          <li>Following in-class activity again to figure out how to set up live server to serve my code and to bundle it with Rollup. This included getting help via discord to understand instructions.</li>
         </ol>
         <div class="spacer">
           <div style="display: flex;justify-content:center">
@@ -67,28 +89,39 @@
             
           </div>
           <div style="display: flex;justify-content:center">
-            <p><i>Example of process for creating a sketch (Sketch Six).</i></p>
+            <p><i>[Add IMAGE!!!]</i></p>
           </div>
         </div>
 
         <div class="spacer"></div>
 
         <h2 style="color:#8B2019">Issue Deep-Dive</h2>
-        <p>One logic error I ran into in....Note for Error write up -- the direction and speed (using console.log of setspeed to see how the number for keycode wasn't updating for right arrow after the very beginning of the game) </p>
+        <p>One logic error I ran into in....Note for Error write up -- the direction and speed (using console.log of setspeed to see how the number for keycode wasn't updating for right arrow after the very beginning of the game). Fixed by setting the player speed and direction separately instead of together in the function setSpeed.</p>
         <div class="spacer"></div>
 
         <h2 style="color:#8B2019">Ideas and Future Work</h2>
         <p>Some ideas I might consider implementing in the future include:</p>
         <ul>
-          <li>...</li>
-          <li>...</li>
-          <li>...</li>
-          <li>...</li>
+          <li>Allowing users to choose game diffculty level. This would be controled by the speed of the fireballs, how many fireballs there are, the size of the fireballs the speed of the balloon, etc. </li>
+          <li>Providing player customization: users being able to choose other player avatars besides a balloon, or being able to specify the color of the balloon.</li>
+          <li>Allowing users to customize the game setting by being able to choose between a selection of game backgrounds.</li>
+          <li>Allowing a life system and incrementing the difficulty of the game in several stages for a larger game journey.</li>
           <li>...</li>
         </ul>
         <div class="spacer"></div>
         
         <h2 style="color:#8B2019">Kudos</h2>
+        <p>[LOOK AT NOTES IN GITHUB CODE FOR SPECIFIC REFERENCES]</p>
+        <p>https://github.com/esadjo/dev-toolchain-game/blob/main/index.js </p>
+        <p>https://p5play.org/learn/ </p>
+          <p>https://p5play.org/learn/sprite.html?page=3</p>
+          <p>How to add background image -  https://p5js.org/examples/image-background-image.html</p>
+          <p>Reference -- https://editor.p5js.org/mbardin/sketches/OyZLpQW6N -- to understand how to specify fireball position</p>
+          <p>textStyle - https://p5js.org/reference/#/p5/textStyle </p>
+          <p>scale - https://p5play.org/learn/sprite_animation.html?page=1 </p>
+        <p>https://creative-coding.decontextualize.com/making-games-with-p5-play/ -- Sprite Groups example, Following "Images and animations", Using code from "Sprites on the move", "Collision callbacks"  </p>
+
+
         <p>Wh... <a href="https://p5js.org/examples/sound-load-and-play-sound.html" target="_blank" class="a-2">Load and Play Sound</a></p>
       </div>
     </div>

@@ -237,3 +237,37 @@ button:hover {
   /*gap: 20px;*/
 }
 
+  /* Create four equal columns that sits next to each other */
+  .column {
+    /*flex: 25%;*/
+    /*max-width: 25%*/
+    /*padding: 0 4px;*/
+   /* gap: 40px;*/
+  }
+
+  .gallery-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 100px;
+}
+
+.container-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  /*align-content: center;*/
+  justify-content: center; 
+}
+
+
+.picture-gif {
+  width: 560px;
+  height: 350px;
+  border-radius: 0px;
+  object-fit: cover;
+  aspect-ratio: 1;
+
+
+}
+
