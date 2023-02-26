@@ -35,10 +35,10 @@
       
       <div class="content-container">
         <h2 style="color:#005B90">Project Description</h2>
-        <p>My project is a browser extension which allows users to increase an overlay plant ecosystem on their screen that reflects the current weather of a selected location.</p>
+        <p>My proposed final project is a browser extension which allows users to add a persistent plant ecosystem to their screen that reflects the current weather of a selected location.</p>
           
       
-        <p>Note: This project will extend the plant web browser extension I made for MP1 by creating.</p>
+        <p>Note: This project will extend the plant web browser extension I made for MP1.</p>
         
         <button style="background-color: #003C5F; border: 2px solid #003C5F;"><a href="https://esadjo.github.io/projects/browserextension.html" style="text-decoration: none;">View Browser Extension Project</a></button>
         
@@ -48,26 +48,28 @@
 
 
         <h2 style="color:#005B90">Interface Sketches</h2>
-        <p>Below are two sketches of the interface I plan on implementing:</p>
+        <p>Below are two initial sketches I made for the interface I plan on implementing:</p>
+        <div class="gallery-center">
+              <div class="column">
+                <img src="/images/proposalsketches.png" class="picture-gif" style="width: 700px; height: 435.81px;">
+                <div style="display: flex;justify-content:center"><p><i>Sketches of potential interface.</i></p></div>
+              </div>
+        </div>
+
+        <p>I've also included more detailed lo-fi mockups to exemplify the main user flow the interface will support.</p>
 
         <div class="gallery-center">
           <div class="container-gallery">
               
               <div class="column">
-                <img src="/images/sketch1proposal.png" class="picture-gif" style="width: 1708.75px; height: 1067px;" >
-                <div style="display: flex;justify-content:center"><p><i>User moving blue balloon using arrow keys.</i></p></div>
+                <img src="/images/sketch1proposal.png" class="picture-gif" style="width: 1187px; height: 740px;" >
+                <div style="display: flex;justify-content:center"><p><i>Task flow in screen</i></p></div>
               </div>
               
               <div class="column">
                 <img src="/images/sketch2proposal.png" class="picture-gif" style="width: 1187px; height: 290.5px;">
-                <div style="display: flex;justify-content:center"><p><i>Balloon reappearing on opposite side when leave screen.</i></p></div>
+                <div style="display: flex;justify-content:center"><p><i>Task flow up close</i></p></div>
               </div>
-
-              <div class="column">
-                <img src="/images/creatingplantworld.png" class="picture-gif" style="width: 1187px; height: 1150.57px;">
-                <div style="display: flex;justify-content:center"><p><i>Balloon reappearing on opposite side when leave screen.</i></p></div>
-              </div>
-
           </div>
         </div>
 
@@ -77,8 +79,21 @@
 
         <h2 style="color:#005B90">Prototypes & Versions of Project</h2>
         <p>Descriptions of two versions of your project:</p>
-          <p>Prototype version - A minimal version that demonstrates the core features of your app. This should be functional, but it does not have to be robust or beautiful. For example, some parts might be hardcoded instead of accepting user input, and you might have minimal CSS styling.</p>
-          <p>Final Version - Your envisioned final submission.</p>
+          
+          <h3>Prototype Version</h3>
+          <p>This prototype will showcase the core features of the web browser extension. This includes users being able to input a specific city/location into a text input box and the weather conditions retrieved from the <a href="https://www.weatherapi.com/" target="_blank" class="a-2">Weather API</a>. To simplify the prototype, the location inputted will not be stored and remembered after closing the extension popup. Users will also be able to select a plant from 3 options. Users can then add the plant world to their page through a toggle. At this stage, the background and the plant displayed will be hardcoded. The background will only display the day condition (the night condition is excluded). The plant displayed will be one of the 3 plants (1 of 3 images will be used). This is compared to the intended 12 images for plants (4 variations of each plant based on the weather condition). See the image below.</p>
+          
+          <div class="gallery-center">
+            <div class="container-gallery">
+                <div class="column">
+                  <img src="/images/creatingplantworld.png" class="picture-gif" style="width: 1187px; height: 1150.57px;">
+                  <div style="display: flex;justify-content:center"><p><i>Display of the 12 plant images that will be displayed in the plant world based on the weather conditions. These are then either overlayed on top of the day or night version of the background.</i></p></div>
+                </div>
+            </div>
+          </div>
+
+          <h3>Final Version</h3>
+          <p>For the final version, users should be able to enter a location of their choice and select a plant type. The location entered is updated inline on the popup screen. If users turn on the toggle, the plant world appears and consistent of 3 responsive elements: the background (day or night), the plant (1 of 12 based on the plant type previously selected and the current weather condition), and the weather icon (retrieved from the weather API). Users' inputed location, plant type, and current display toggle state are remembered when the popup is closed and across tabs. The weather conditions are retrieved from the API every 30 minutes to an hour and 3 image elements of the plant world are updated to reflect the current weather conditions and time. All of this will be achieve without any hardcoded elements.</p>
 
 
 
@@ -87,31 +102,47 @@
 
 
         <h2 style="color:#005B90">Plan for Development Process</h2>
-        <p>A numbered, step-by-step plan for your development process, with two milestones (the prototype version and final version)</p>
-        <p>...</p>
+        <p>Below is a step-by-step plan for my development process:</p>
         <ol>
-          <li>...</li>
-          <li>...</li>
-          <li>...</li>
-          <li>...</li>
+          <li>Create new repository by cloning MP1 web browser extension GitHub repository as a starting point.</li>
+          <li>First add all the elements to the web browser popup. This includes adding headers, text, text input fields, toggles, etc. At this point, they will be responsive</li>
+          <li>Work on the popup files (mainly popup.js) to save the location users input. The location should be saved and displayed on the popup for user feedback.</li>
+          <li>Work on calling the Weather API to retrieve the current weather conditions of the location inputed by the user. This will be achieve through the <a href="https://www.weatherapi.com/docs/#apis-realtime" target="_blank" class="a-2">Realtime API method</a>I will want to access and store the results for condition:text (Weather condition text), condition:icon (Weather icon url), and is_day (to know if it's day or night).</li>
+          <li>Storing the data from the Weather API.</li>
+          <li>Add all the visual elements of the plant world to a block element overlayed on top of the web pages. At this point, the visual elements do not need to be accurately positioned, they just need to be included. The three elements are the background of the world (sky and dirt), the plant, and the weather icon (which is retrieved from the weather API). The background and the plant will be hard coded, but the weather icon should be retrieved from the weather API and should reflect the weather of the location specified by the user.</li>
+          <li><i>Milestone 1:</i> Prototype complete. At this stage, I will begin the final version.</li>
+          <li>Modify the popup.js and content script files to display the correct background and plant based on user's inputed location and selected plant type.</li>
+          <li>Modify the popup.js file to store and remember users' inputs for all fields when they close the browser extension popup and/or move to a different web browser tab.</li>
+          <li>Modify the content script files and popup.js file to allow the plant world to reflect whether or not it is day or not. This is so that the plant world will display either the day or night background (sky and dirt background). </li>
+          <li>Modify the content script files to visually organize the plant world overlayed on top of web pages. The three elements of the plant world (the background, the plant, and the weather icon) should all be properly positions as displayed in the previous image above.</li>
+          <li>Clean up and finalize the visual design of the popup. This includes the hierarchy, visual layout, typography, etc.</li>
+          <li>Modify the popup.js and contentscript.js to regularly update (e.g., every 30 minutes to an hour) to call the weather API to update the weather icon displayed in the world. This is so that the plant world displays the current weather.</li>
+          <li><i>Milestone 2:</i> Final version complete.</li>
         </ol>
 
 
         <div class="spacer"></div>
 
         <h2 style="color:#005B90">Known Unknowns</h2>
-        <p>A list of known unknowns (things you don't currently know how to do, but know you will have to figure out)</p>
+        <p>To be able to complete this project, I will have to fill the following knowledge gaps:</p>
+        <ul>
+          <li>How to automatically call an API only after a given interval of time</li>
+          <li>How to store <i>multiple</i> variables to be remembered after the popup is closed and while navigating across tabs.</li>
+          <li>How to add and posiiton multiple images to a block element contentscript files.</li>
+        </ul>
         
         
         
         <div class="spacer"></div>
 
         <h2 style="color:#005B90">Stretch Goals</h2>
-        <p>A list of stretch goals.</p>
+        <p>My stretch goals include:</p>
         <ul>
-          <li>....</li>
-          <li>....</li>
-          <li>....</li>
+          <li>Allow users to a list of locations for easy access.</li>
+          <li>Allow users to change the size and location of the plant world.</li>
+          <li>Allow users to 'plant' multiple plants in the plant world instead of just one.</li>
+          <li>Animate the plants to grow overtime.</li>
+          <li>Animate the weather conditions instead of having them be static.</li>
         </ul>
       
       </div>
