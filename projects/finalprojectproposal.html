@@ -35,7 +35,7 @@
       
       <div class="content-container">
         <h2 style="color:#005B90">Project Description</h2>
-        <p>My proposed final project is a browser extension which allows users to add a persistent plant ecosystem to their screen that reflects the current weather of a selected location.</p>
+        <p>My proposed final project is a browser extension that allows users to add a persistent spherical plant world to their screen, which reflects the current weather of an inputted location.</p>
           
       
         <p>Note: This project will extend the plant web browser extension I made for MP1.</p>
@@ -52,7 +52,7 @@
         <div class="gallery-center">
               <div class="column">
                 <img src="/images/proposalsketches.png" class="picture-gif" style="width: 700px; height: 435.81px;">
-                <div style="display: flex;justify-content:center"><p><i>Sketches of potential interface.</i></p></div>
+                <div style="display: flex;justify-content:center"><p><i>Sketches of the potential interface.</i></p></div>
               </div>
         </div>
 
@@ -78,22 +78,22 @@
 
 
         <h2 style="color:#005B90">Prototypes & Versions of Project</h2>
-        <p>Descriptions of two versions of your project:</p>
+        <p>There will be two versions of my project.</p>
           
           <h3>Prototype Version</h3>
-          <p>This prototype will showcase the core features of the web browser extension. This includes users being able to input a specific city/location into a text input box and the weather conditions retrieved from the <a href="https://www.weatherapi.com/" target="_blank" class="a-2">Weather API</a>. To simplify the prototype, the location inputted will not be stored and remembered after closing the extension popup. Users will also be able to select a plant from 3 options. Users can then add the plant world to their page through a toggle. At this stage, the background and the plant displayed will be hardcoded. The background will only display the day condition (the night condition is excluded). The plant displayed will be one of the 3 plants (1 of 3 images will be used). This is compared to the intended 12 images for plants (4 variations of each plant based on the weather condition). See the image below.</p>
+          <p>This prototype will showcase the core features of the web browser extension. This includes users being able to input a specific city/location into a text input box and the weather conditions will be retrieved from the <a href="https://www.weatherapi.com/" target="_blank" class="a-2">Weather API</a>. To simplify the prototype, the location inputted will not be stored and remembered after closing the extension popup in this version. Users will also be able to select a plant from 3 options. Users can then add the plant world to their page through a toggle. At this stage, the background and the plant displayed will be hardcoded. The background will only display the day condition (the night condition is excluded). The plant displayed will be one of the 3 plants (1 of 3 images will be used). This is compared to the intended 12 images for plants (4 variations of each plant based on the weather condition). See the image below.</p>
           
           <div class="gallery-center">
             <div class="container-gallery">
                 <div class="column">
                   <img src="/images/creatingplantworld.png" class="picture-gif" style="width: 1187px; height: 1150.57px;">
-                  <div style="display: flex;justify-content:center"><p><i>Display of the 12 plant images that will be displayed in the plant world based on the weather conditions. These are then either overlayed on top of the day or night version of the background.</i></p></div>
+                  <div style="display: flex;justify-content:center"><p><i>A breakdown of the 12 plant images that will be displayed in the plant world based on the weather conditions (see middle column). These are then either overlayed on top of the day or night versions of the background.</i></p></div>
                 </div>
             </div>
           </div>
 
           <h3>Final Version</h3>
-          <p>For the final version, users should be able to enter a location of their choice and select a plant type. The location entered is updated inline on the popup screen. If users turn on the toggle, the plant world appears and consistent of 3 responsive elements: the background (day or night), the plant (1 of 12 based on the plant type previously selected and the current weather condition), and the weather icon (retrieved from the weather API). Users' inputed location, plant type, and current display toggle state are remembered when the popup is closed and across tabs. The weather conditions are retrieved from the API every 30 minutes to an hour and 3 image elements of the plant world are updated to reflect the current weather conditions and time. All of this will be achieve without any hardcoded elements.</p>
+          <p>For the final version of the web browser extension, users should be able to enter a location of their choice and select a plant type. The location entered is updated inline on the popup screen. If the user turns on the toggle, the plant world appears, consisting of 3 elements reflecting the weather conditions of the specified location: the background (day or night), the plant (1 of 12 based on the plant type previously selected and the current weather condition), and the weather icon (retrieved from the Weather API). Users' inputted location, plant type, and current display toggle state are remembered when the popup is closed and/or accessed across tabs. The weather conditions are retrieved from the API every 15 minutes and the three image elements of the plant world are updated accordingly to reflect the current weather conditions and time. All of this will be achieved without any hardcoded elements.</p>
 
 
 
@@ -104,19 +104,21 @@
         <h2 style="color:#005B90">Plan for Development Process</h2>
         <p>Below is a step-by-step plan for my development process:</p>
         <ol>
-          <li>Create new repository by cloning MP1 web browser extension GitHub repository as a starting point.</li>
-          <li>First add all the elements to the web browser popup. This includes adding headers, text, text input fields, toggles, etc. At this point, they will be responsive</li>
+          <li>Create a new repository by cloning my MP1 web browser extension GitHub repository as a starting point.</li>
+          <li>Integrate dev toolchain (local development server, build tool, and deployment tool) into the repository.</li>
+          <li>First add all the elements to the web browser popup. This includes adding headers, text, text input fields, toggles, etc. At this point, they will not be responsive.</li>
           <li>Work on the popup files (mainly popup.js) to save the location users input. The location should be saved and displayed on the popup for user feedback.</li>
-          <li>Work on calling the Weather API to retrieve the current weather conditions of the location inputed by the user. This will be achieve through the <a href="https://www.weatherapi.com/docs/#apis-realtime" target="_blank" class="a-2">Realtime API method</a>I will want to access and store the results for condition:text (Weather condition text), condition:icon (Weather icon url), and is_day (to know if it's day or night).</li>
+          <li>Work on calling the Weather API to retrieve the current weather conditions of the location inputted by the user. This will be achieved through the <a href="https://www.weatherapi.com/docs/#apis-realtime" target="_blank" class="a-2">Realtime API method</a>. I will want to access and store the results for condition:text (Weather condition text), condition:icon (Weather icon url), and is_day (to know if it's day or night).</li>
           <li>Storing the data from the Weather API.</li>
-          <li>Add all the visual elements of the plant world to a block element overlayed on top of the web pages. At this point, the visual elements do not need to be accurately positioned, they just need to be included. The three elements are the background of the world (sky and dirt), the plant, and the weather icon (which is retrieved from the weather API). The background and the plant will be hard coded, but the weather icon should be retrieved from the weather API and should reflect the weather of the location specified by the user.</li>
+          <li>Add all the visual elements of the plant world to a block element overlayed on top of the web pages. At this point, the visual elements do not need to be accurately positioned. They just need to be included. The three elements are the background of the world (sky and dirt), the plant, and the weather icon (which is retrieved from the weather API). The background and the plant will be hard coded, but the weather icon should be retrieved from the weather API and should reflect the weather of the location specified by the user.</li>
           <li><i>Milestone 1:</i> Prototype complete. At this stage, I will begin the final version.</li>
-          <li>Modify the popup.js and content script files to display the correct background and plant based on user's inputed location and selected plant type.</li>
+          <li>Duplicate the Prototype 1 repository for the final version.</li>
+          <li>Modify the popup.js and content script files to display the correct background and plant based on users' inputted location and selected plant type.</li>
           <li>Modify the popup.js file to store and remember users' inputs for all fields when they close the browser extension popup and/or move to a different web browser tab.</li>
-          <li>Modify the content script files and popup.js file to allow the plant world to reflect whether or not it is day or not. This is so that the plant world will display either the day or night background (sky and dirt background). </li>
-          <li>Modify the content script files to visually organize the plant world overlayed on top of web pages. The three elements of the plant world (the background, the plant, and the weather icon) should all be properly positions as displayed in the previous image above.</li>
+          <li>Modify the content script files and popup.js file to allow the plant world to reflect whether or not it is day. This is so that the plant world will display either the day or night background (sky and dirt background). </li>
+          <li>Modify the content script files to visually organize the plant world overlayed on top of web pages. The three elements of the plant world (the background, the plant, and the weather icon) should all be properly positioned, as displayed in the previous image above.</li>
           <li>Clean up and finalize the visual design of the popup. This includes the hierarchy, visual layout, typography, etc.</li>
-          <li>Modify the popup.js and contentscript.js to regularly update (e.g., every 30 minutes to an hour) to call the weather API to update the weather icon displayed in the world. This is so that the plant world displays the current weather.</li>
+          <li>Modify the popup.js and contentscript.js to regularly update (e.g., every 15 minutes) to call the Weather API to update the weather icon displayed in the world. This is so that the plant world displays the current weather.</li>
           <li><i>Milestone 2:</i> Final version complete.</li>
         </ol>
 
@@ -126,9 +128,10 @@
         <h2 style="color:#005B90">Known Unknowns</h2>
         <p>To be able to complete this project, I will have to fill the following knowledge gaps:</p>
         <ul>
-          <li>How to automatically call an API only after a given interval of time</li>
-          <li>How to store <i>multiple</i> variables to be remembered after the popup is closed and while navigating across tabs.</li>
-          <li>How to add and posiiton multiple images to a block element contentscript files.</li>
+          <li>How to ensure that the Weather API is called only after a set interval of time (every 15 minutes) once the user input of the location is accepted. I will need to learn how to reduce the number of calls made if the user refreshes their browser several times before 15 minutes have passed without the location inputted changing. This is to reduce the number of API calls made because there is a limit.</li>
+          <li>How to make sure that the extension is only calling the API when the plant world is turned. I will need to ensure that it isn't accidentally calling the API in the background when the plant world is toggled off to reserve energy and ensure the API limit for the number of calls made isn't reached.</li>
+          <li>How to efficiently store <i>multiple</i> variables to be remembered after the popup is closed and while navigating across tabs.</li>
+          <li>How to add and position multiple images within a block element in the content script files.</li>
         </ul>
         
         
@@ -138,11 +141,12 @@
         <h2 style="color:#005B90">Stretch Goals</h2>
         <p>My stretch goals include:</p>
         <ul>
-          <li>Allow users to a list of locations for easy access.</li>
-          <li>Allow users to change the size and location of the plant world.</li>
-          <li>Allow users to 'plant' multiple plants in the plant world instead of just one.</li>
-          <li>Animate the plants to grow overtime.</li>
-          <li>Animate the weather conditions instead of having them be static.</li>
+          <li>Establishing a counting system and warning message for when users are close to reaching their max number of "refreshes" of the browser because there is a limited number of calls to the API that can be made each month (1,000,000 per month).</li>
+          <li>Allowing users to save a list of locations for easy access.</li>
+          <li>Allowing users to change the size and location of the plant world.</li>
+          <li>Allowing users to 'plant' multiple plants in the plant world instead of just one.</li>
+          <li>Animating the plants to grow over time.</li>
+          <li>Animating the weather conditions instead of having them be static.</li>
         </ul>
       
       </div>
