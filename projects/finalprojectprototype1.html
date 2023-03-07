@@ -114,12 +114,14 @@
 
         <h2 style="color:#1D5505">Implementation plan</h2>
         <p>[!!!TO DO!!!!!] How has your implementation plan for your final version changed now that you have completed your prototype? Why has it changed?</p>
-        
+        <p> No longer planning on hiding api keys -- turned out much more complicated when building a web browser and saving it to github -- key needs to be included - so can't configure it and use gitignore -- because then key wouldn't be uploaded fr github to see</p>
+
         <div class="spacer"></div>
 
 
         <h2 style="color:#1D5505">Issue Deep-Dive</h2>
         <p>[!!!TO DO!!!!!] One logic error I ran into ... What I learned along the way was....</p>
+        <p>The location inputted by users not being saved that I was missing including the location in the message sent between my popup and content script js files. What I learned from this was that simp;y saving a variable like location with chrome.storage and then getting it in the content scripts won't allow the variable to be properly remembers -- the chrome runtime message to communicate between different contexts (e.g., 2 tabs) </p>
         <div class="spacer"></div>
 
         <h2 style="color:#1D5505">Ideas and Future Work</h2>
