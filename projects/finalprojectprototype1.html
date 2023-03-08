@@ -35,9 +35,10 @@
       
       <div class="content-container">
         <h2 style="color:#1D5505">Overview and Usage</h2>
-        <p>The core functionality of this project is that a user can type in an enter a location (e.g., a city), select a plant, and toggle on the Launch world toggle to add a persistent plant world to their web browser. This plant world reflects the weather of the location inputted and is remembered across tabs and when refreshed. The plant type selected by users is displayed within the plant world.</p>
+        <p>The core functionality of this project is that a user can type in and enter a location (e.g., a city), select a plant, and toggle on the "Launch World" toggle to add a persistent plant world to their web browser. This plant world reflects the weather of the location inputted and is remembered across tabs and when the page is refreshed. The plant type selected by users is displayed within the plant world.</p>
 
         <p>To be able to run the code that produces this browser extension, go to my GitHub repository called <a href="https://github.com/esadjo/finalproject-prototype1" target="_blank" class="a-2">finalproject-prototype1</a>, click on the top right green button "Code" and select "Download Zip" from the dropdown menu. Navigate to your downloads folder and open up the zip. The next step is to open chrome://extensions/ in your Google Chrome browser. Click on the "Load unpacked" button in the top left corner and then select the sub-folder "web browser plant world" within the folder "finalproject-prototype1-main" you unzipped earlier. Click on the extension icon in the web browser top toolbar and pin the Web Browser Plant extension to your toolbar. Navigate to a web page and start using the browser extension!</p>
+        <div class="spacer"></div>
         <a href="https://github.com/esadjo/finalproject-prototype1" target="_blank" class="a-2"></a>
         <div style="display: flex;justify-content:center">
           <img src="/images/Process of Using Plant Web Browser.png" style="width:1500px;height:auto;">
@@ -45,14 +46,14 @@
  
         <div class="spacer"></div>
 
-        Below are some demos of the web browser's functionality.
+        Below are some demos of the web browser extension's functionality.
 
         <div class="gallery-center">
           <div class="container-gallery">
               
               <div class="column">
                 <img src="/images/Inputting location and adding plant world.gif" class="picture-gif">
-                <div style="display: flex;justify-content:center"><p><i>User inputs location and turns the toggle on to add the plant world.</i></p></div>
+                <div style="display: flex;justify-content:center"><p><i>User inputs a location and turns the toggle on to add the plant world.</i></p></div>
               </div>
               
               <div class="column">
@@ -78,17 +79,17 @@
 
 
         <h2 style="color:#1D5505">Development Process</h2>
-        <p>The steps I took for this project, closely followed the development process I specified in my <a href="https://esadjo.github.io/projects/finalprojectproposal.html" target="_blank" class="a-2">project proposal</a>. I specifically: </p>
+        <p>The steps I took for this project closely followed the development process I specified in my <a href="https://esadjo.github.io/projects/finalprojectproposal.html" target="_blank" class="a-2">project proposal</a>. I specifically: </p>
         <ol>
           <li>Created a new repository by cloning my MP1 web browser extension GitHub repository as a starting point.</li>
           <li>Added text input and location placeholders to the popup.</li>
-          <li>Worked on the popup files (mainly popup.js) to save the location users input.</li>
+          <li>Worked on the popup files (mainly popup.js) to save the location a user inputs.</li>
           <li>Worked on calling and storing the Weather API to retrieve the current weather conditions of the location inputted by the user.</li>
           <li>Added all the visual elements of the plant world to a block element overlayed on top of the web pages. The weather icon is retrieved from the Weather API and the selection of plants is based on the framework I created for my MP1 assignment.</li>
-          <li>Setting up setinterval to ensure that the Weather API is called after every couple of minutes. For testing purposes, I made the interval a minute long to get immediate feedback, and reverted it to every 15 minutes afterwards.</li>
+          <li>Set up setinterval to ensure that the Weather API is called every couple of minutes. For testing purposes, I made the interval a minute long to get immediate feedback and reverted it to every 15 minutes afterward.</li>
           <li>Troubleshot problems with the location not being remembered when you refresh the page or move to a different tab, working across the popup and content script javascript files.</li>
-          <li>Modified contentscript files so that the Weather API is called when a user inputs a new location, regardless of the timeline of the setinterval function.</li></li>
-          <li>[!!!!!!!TO DO!!!!!] Storing API key so it can't be seen by others in my code.</li>
+          <li>Modified the content script files so that the Weather API is called when a user inputs a new location, regardless of the timeline of the setinterval function.</li></li>
+          <li>Tested the web browser to make sure the core functionality is working.</li>
         </ol>
         <div class="spacer">
           <div style="display: flex;justify-content:center">
@@ -103,25 +104,24 @@
         <div class="spacer"></div>
 
         <h2 style="color:#1D5505">Project scope</h2>
-        <p>[!!!TO DO!!!!!] How has your project scope changed now that you have completed your prototype? What features have been added/removed to/from your anticipated final project?</p>
+        <p>My project scope has mostly stayed the same now that I've completed my prototype. One change I've made to my project scope is that I will no longer be storing my API key in a hidden way so that the API isn't visible in the files uploaded to GitHub. After inquiring into the process of hiding APIs within browser extensions created using javascript, it became clear that this was much more complicated than I initially anticipated. Using a dev toolchain is no longer in scope too. This is also based on the professor's feedback that dev toolchains wouldn't be necessary for my project. Based on the professor’s guidance, I thus removed hiding API keys and implementing a dev toolchain from my project scope. No other project elements have been removed or added. Based on the amount of time it took me to resolve issues the of users' inputted location being saved, remembered, and retrieved to be used in the popup and content scripts, my stretch goals will not be included in my project scope. The prototype itself has only a small portion of the total intended functionality of the browser extension implemented. I will be focusing on successfully implementing the remaining functionality and visual design of the web extension browser for the remainder of my final project.</p>
 
         <div class="spacer"></div>
 
         <h2 style="color:#1D5505">Time management</h2>
-        <p>[!!!TO DO!!!!!] How did the amount of time you spent building your prototype compare to your initial plan? Were there any unanticipated roadblocks or setbacks?</p>
-        <p>Took much longer to save the location.</p>
+        <p>The amount of time I spent building my prototype was much longer than I anticipated. I experienced unanticipated roadblocks when I was working on implementing the responsiveness of the location user input. I was having trouble saving and relaying the location inputted by users from the popup to the content scripts file that then display the proper weather icon according to the location specified. This is an issue that I will discuss in more depth in the Issue Deep Dive section.</p>
+        
         <div class="spacer"></div>
 
         <h2 style="color:#1D5505">Implementation plan</h2>
-        <p>[!!!TO DO!!!!!] How has your implementation plan for your final version changed now that you have completed your prototype? Why has it changed?</p>
-        <p> No longer planning on hiding api keys -- turned out much more complicated when building a web browser and saving it to github -- key needs to be included - so can't configure it and use gitignore -- because then key wouldn't be uploaded fr github to see</p>
+        <p>The three changes to my implementation plan are (1) removing the step of hiding my API keys, (2) removing the steps involving implementing a dev toolchain, and (3) deprioritizing implementing the stretch goals I had for this project. I also started to implement the last step of my final prototype (updating the weather conditions of the plant world every 15 minutes), so this step will be moved up closer to the top of the steps I have for implementing in the next iteration of browser. The reasons for these changes are discussed in the Project Scope section above.</p>
 
         <div class="spacer"></div>
 
 
         <h2 style="color:#1D5505">Issue Deep-Dive</h2>
-        <p>[!!!TO DO!!!!!] One logic error I ran into ... What I learned along the way was....</p>
-        <p>The location inputted by users not being saved that I was missing including the location in the message sent between my popup and content script js files. What I learned from this was that simp;y saving a variable like location with chrome.storage and then getting it in the content scripts won't allow the variable to be properly remembers -- the chrome runtime message to communicate between different contexts (e.g., 2 tabs) </p>
+        <p>One logic error I ran into was that the location input value specified by users through the popup was not remembered when you navigated to a new tab or refreshed the page. By using console.log statements, I was able to understand whether or not the location value was being saved and whether it was being communicated from the popup to the content scripts. Through this method and asking clarifying questions during office hours, I was able to pinpoint that the location inputted by users was not being saved properly because I was missing the location in the message sent between my popup and content script js files. In the process, I learned more about how chrome storage and chrome runtime work. I learned that simply saving a variable like location with chrome.storage and then attempting to retrieve it in the popup won't allow the variable to be properly remembered within the content scripts files. Sending the value through a chrome runtime message is needed to communicate between different contexts (e.g., 2 tabs).</p>
+ 
         <div class="spacer"></div>
 
         <h2 style="color:#1D5505">Ideas and Future Work</h2>
@@ -140,10 +140,10 @@
         <p>In addition to going in-class office hours to try to pinpoint how to save and remember the location inputted by users, I also used the following online resources:</p>
         <ul>
           <li><a href="https://www.weatherapi.com/api-explorer.aspx" target="_blank" class="a-2">The Weather API's Interactive API Explorer</a> to determine the elements needed to make an API call and what the response structure is.</li>
-          <li><a href="https://github.com/branchwelder/example-fetch/blob/main/index.js" target="_blank" class="a-2">The professor's Example Fetch</a> to revisit how to fetch data from an API</li>
+          <li><a href="https://github.com/branchwelder/example-fetch/blob/main/index.js" target="_blank" class="a-2">The Professor's Example Fetch</a> to revisit how to fetch data from an API.</li>
           <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch" target="_blank" class="a-2">Mozilla Developer article on "Using the Fetch API"</a> to learn more about Fetch API.</li>
           <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/setInterval" target="_blank" class="a-2">A Mozilla Developer explanation of setInterval()</a> to determine how to run the function calling the Weather API to retrieve the weather details every 15-30 minutes.</li>
-          <li>By proxy, any resources used to make that my MP1 <a href="https://esadjo.github.io/projects/browserextension.html" target="_blank" class="a-2">Web browser Plant Extension</a> because I built upon my code from MP1. (See my Kudos section for that project for specifics).</li>
+          <li>By proxy, any resources that were used to make my MP1 <a href="https://esadjo.github.io/projects/browserextension.html" target="_blank" class="a-2">Web Browser Plant Extension</a> because I built upon my code from MP1. (See my Kudos section from that project for specifics).</li>
           </li>
         </ul>
 
