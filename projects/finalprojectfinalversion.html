@@ -4,7 +4,7 @@
   </head>
   <body>
     <div class="page-container"> 
-      <div class="header" style="background-color: #1D5505;">
+      <div class="header" style="background-color: #235B8C;">
         <h1 class="logo"><a href="../index.html">Emma Sadjo 438 Portfolio</a></h1> 
         <div class="sub-pages">
           <h2 class="header-2"><a href="../cheatsheets/cheatsheets.html">Cheatsheets</a></h2>
@@ -12,7 +12,7 @@
         </div>
       </div>
 
-      <div class="page-container-2" style="background-color: #EBF8D9;">
+      <div class="page-container-2" style="background-color: #DCECFD;">
         <!--<div class="rectangle-container" style="background-color: rgb(251, 216, 216);">-->  
           <div class="project">
             <a href="./projects/finalproject.html">
@@ -23,8 +23,8 @@
                 /> 
             </a>
             <div class="project-description">
-              <h1 style="color:#1D5505">Final Project (Final Version)</h1>
-              <div class="p2">A persistent plant world added to your browser, reflecting a location of your choice.</div>
+              <h1 style="color:#235B8C">Final Project (Final Version)</h1>
+              <div class="p2">Plant Weather World. A browser extension to add a persistent plant world added to your browser, reflecting a location of your choice.</div>
             </div>
           </div>
         <!--</div>-->
@@ -34,8 +34,8 @@
       <div class="project-container">
       
       <div class="content-container">
-        <h2 style="color:#1D5505">Overview and Usage</h2>
-        <p>The core functionality of this project is that a user can type in and enter a location (e.g., a city), select a plant, and toggle on the "Launch World" toggle to add a persistent plant world to their web browser. This plant world reflects the weather of the location inputted and is remembered across tabs and when the page is refreshed. The plant type selected by users is displayed within the plant world.</p>
+        <h2 style="color:#235B8C">Overview and Usage</h2>
+        <p>The core functionality of this project is that a user can add a customized plant world to their browser that reflects the current weather of a location of their choice. Through the popup of the browser extension, users can enter in a location, and their choice is stored and updated to be reflected on the popup screen. Users can also select the plant type of the plant "planted" in the world between 3 types: a sprout, herb, and clover. If the user toggles on the "Launch World" toggle, a world will be displayed in the bottom left corner of their screen, reflecting the choices they previously made. This world consistents of a sky, dirt ground, the plant selected, and imagery of the current weather that is animated. The sky of the world also reflects whether it is night or day in the location specified. Additionally, users can update the location the plant world reflects by entering a new locaiton. Selections made by users are remembered across tabs and when the page is refreshed. can type in and enter a location (e.g., a city), select a plant, and toggle on the "Launch World" toggle to add a persistent plant world to their web browser. This plant world reflects the weather of the location inputted and is remembered across tabs and when the page is refreshed.</p>
 
         <p>To be able to run the code that produces this browser extension, go to my GitHub repository called <a href="https://github.com/esadjo/finalproject-prototype1" target="_blank" class="a-2">finalproject-prototype1</a>, click on the top right green button "Code" and select "Download Zip" from the dropdown menu. Navigate to your downloads folder and open up the zip. The next step is to open chrome://extensions/ in your Google Chrome browser. Click on the "Load unpacked" button in the top left corner and then select the sub-folder "web browser plant world" within the folder "finalproject-prototype1-main" you unzipped earlier. Click on the extension icon in the web browser top toolbar and pin the Web Browser Plant extension to your toolbar. Navigate to a web page and start using the browser extension!</p>
         <div class="spacer"></div>
@@ -52,23 +52,34 @@
           <div class="container-gallery">
               
               <div class="column">
-                <img src="/images/Inputting location and adding plant world.gif" class="picture-gif">
-                <div style="display: flex;justify-content:center"><p><i>User inputs a location and turns the toggle on to add the plant world.</i></p></div>
+                <img src="/images/Entering location for first time and location saved.gif" class="picture-gif">
+                <div style="display: flex;justify-content:center; width: 560;"><p><i>User inputs a location for the first time. Location is updated from "No Location" to the inputted location, Seattle.</i></p></div>
               </div>
               
               <div class="column">
-                <img src="/images/Changing location and remembered across tabs and when refresh page.gif" class="picture-gif">
-                <div style="display: flex;justify-content:center"><p><i>User changes the location and it's remembered across tabs.</i></p></div>
+                <img src="/images/Location inputted saved and remembered across tabs and refreshing (and also confirming weather is accurate).gif" class="picture-gif">
+                <div style="display: flex;justify-content:center; width: 560;"><p><i>User changes the location and it's remembered after refreshing the page and navigating across tabs. Internet search confirms the weather displayed is accurate.</i></p></div>
               </div>
 
               <div class="column">
-                <img src="/images/Changing plant type_1.gif" class="picture-gif">
-                <div style="display: flex;justify-content:center"><p><i>User changes the plant type.</i></p></div>
+                <img src="/images/location weather condition - different cities_2.gif" class="picture-gif">
+                <div style="display: flex;justify-content:center; width: 560;"><p><i>User inputs different locations and the plant world updates (the background based on the time of day, the plant and the weather icon based on the weather condition).</i></p></div>
               </div>
 
               <div class="column">
-                <img src="/images/Toggling on and off world.gif" class="picture-gif">
-                <div style="display: flex;justify-content:center"><p><i>User toggles the plant world on and off from their screen.</i></p></div>
+                <img src="/images/showing night - matching time_1.gif" class="picture-gif">
+                <div style="display: flex;justify-content:center; width: 560;"><p><i>User inputs a location where it's currently night. The plant world background and weather icon update accordingly.</i></p></div>
+              </div>
+
+              <div class="column">
+                <img src="/images/switching plant type.gif" class="picture-gif">
+                <div style="display: flex;justify-content:center; width: 560;"><p><i>User changes the plant type.</i></p></div>
+              </div>
+
+
+              <div class="column">
+                <img src="/images/toggling world on and off.gif" class="picture-gif">
+                <div style="display: flex;justify-content:center; width: 560;"><p><i>User toggles the plant world on and off from their screen.</i></p></div>
               </div>
 
           </div>
@@ -78,18 +89,21 @@
         <div class="spacer"></div>
 
 
-        <h2 style="color:#1D5505">Development Process</h2>
+        <h2 style="color:#235B8C">Development Process</h2>
         <p>The steps I took for this project closely followed the development process I specified in my <a href="https://esadjo.github.io/projects/finalprojectproposal.html" target="_blank" class="a-2">project proposal</a>. I specifically: </p>
         <ol>
-          <li>Created a new repository by cloning my MP1 web browser extension GitHub repository as a starting point.</li>
-          <li>Added text input and location placeholders to the popup.</li>
-          <li>Worked on the popup files (mainly popup.js) to save the location a user inputs.</li>
-          <li>Worked on calling and storing the Weather API to retrieve the current weather conditions of the location inputted by the user.</li>
-          <li>Added all the visual elements of the plant world to a block element overlayed on top of the web pages. The weather icon is retrieved from the Weather API and the selection of plants is based on the framework I created for my MP1 assignment.</li>
-          <li>Set up setinterval to ensure that the Weather API is called every couple of minutes. For testing purposes, I made the interval a minute long to get immediate feedback and reverted it to every 15 minutes afterward.</li>
-          <li>Troubleshot problems with the location not being remembered when you refresh the page or move to a different tab, working across the popup and content script javascript files.</li>
-          <li>Modified the content script files so that the Weather API is called when a user inputs a new location, regardless of the timeline of the setinterval function.</li></li>
-          <li>Tested the web browser to make sure the core functionality is working.</li>
+          <li>Creating a new repository by cloning my final project prototype 1 GitHub repository as a starting point.</li>
+          <li>Modifying call to weather API to also store the weather condition description and day and night condition to be used elsewhere in code.</li>
+          <li>Creating if statement structure for determining which of the 12 plant states to display depending on which plant type is selected and what the current weather condition is.</li>
+          <li>Modifying the popup.js and content script files to display the correct background (day or night) and plant based on users' inputted location and selected plant type.</li>
+          <li>Debugging problems with the plant and world background only updating when a user clicks the enter button side.</li>
+          <li>Debugging problems with the plant and world background not being remembered and displayed when you navigate to another tab or refresh the page.</li>
+          <li>Debugging problems with the plant image only displaying when you change type of plant in popup.</li>
+          <li>Visually organizing and fixing the positioning of the plant world elements in the block element to the intended design.</li>
+          <li>Adding final responsive elements of the extension. For instance, the initial saved location placeholder displays "No Location" instead of "Undefined" when no location has been saved yet. Otherwise, it displays the most recently entered location.</li>
+          <li>Modifying the visual design of the popup, including defining the typography, hierarchy, color sceheme, and adding helper text.</li>
+          <li>Animating the weather icon so that it travels left and right in a loop to make the world more dynamic.</li>
+          <li>Testing the web browser to make sure the core functionality is working.</li>
         </ol>
         <div class="spacer">
           <div style="display: flex;justify-content:center">
@@ -103,12 +117,15 @@
 
         <div class="spacer"></div>
 
-        <h2 style="color:#1D5505">Issue Deep-Dive</h2>
-        <p>One logic error I ran into was that the location input value specified by users through the popup was not remembered when you navigated to a new tab or refreshed the page. By using console.log statements, I was able to understand whether or not the location value was being saved and whether it was being communicated from the popup to the content scripts. Through this method and asking clarifying questions during office hours, I was able to pinpoint that the location inputted by users was not being saved properly because I was missing the location in the message sent between my popup and content script js files. In the process, I learned more about how chrome storage and chrome runtime work. I learned that simply saving a variable like location with chrome.storage and then attempting to retrieve it in the popup won't allow the variable to be properly remembered within the content scripts files. Sending the value through a chrome runtime message is needed to communicate between different contexts (e.g., 2 tabs).</p>
+        <h2 style="color:#235B8C">Issue Deep-Dive</h2>
+        <p>One logical error I ran into was that after changing the popup to responsively display the plant image based on the inputted locations' weather condition and the plant world background based on the time of day of that location, these elements were not being remembered. The plant image and world image were not showing up when I moved to a different tab OR when I refreshed the page. The images frames were displayed but empty. Originally, I suspected that the source of this error was either from my message sent between the popup and the content script files. However, after following the advice of my professor to use the console further to pinpoint if it was an issue of the order in which elements are retireved, or if it was an issue of accessing chrome storage. It turned out I wasn't properly setting up the use of chrome storage for these images to be retrieved and remembered. So only when the popup was opened and the selections were communicated via the popup message to the content scripts, were the images able to update. Otherwise, the block elements added to the browser before the functions determing the images could be called. By fixing the chrome storage on the content script side, the stored variables needed to determine which images to display were properly retrieved and not dependent on the popup message (or the popup screen being open) to communicate the necessary information.......</p>
+
+        </p>
+          One logic error I ran into was that the location input value specified by users through the popup was not remembered when you navigated to a new tab or refreshed the page. By using console.log statements, I was able to understand whether or not the location value was being saved and whether it was being communicated from the popup to the content scripts. Through this method and asking clarifying questions during office hours, I was able to pinpoint that the location inputted by users was not being saved properly because I was missing the location in the message sent between my popup and content script js files. In the process, I learned more about how chrome storage and chrome runtime work. I learned that simply saving a variable like location with chrome.storage and then attempting to retrieve it in the popup won't allow the variable to be properly remembered within the content scripts files. Sending the value through a chrome runtime message is needed to communicate between different contexts (e.g., 2 tabs).</p>
  
         <div class="spacer"></div>
 
-        <h2 style="color:#1D5505">Ideas and Future Work</h2>
+        <h2 style="color:#235B8C">Ideas and Future Work</h2>
         <p>Some ideas I might consider implementing in the future are the stretch goals described in my proposal. These include:</p>
         <ul>
           <li>Establishing a counting system and warning message for when users are close to reaching their max number of "refreshes" of the browser because there is a limited number of calls to the API that can be made each month (1,000,000 per month).</li>
@@ -120,7 +137,7 @@
         </ul>
         <div class="spacer"></div>
         
-        <h2 style="color:#1D5505">Kudos</h2>
+        <h2 style="color:#235B8C">Kudos</h2>
         <p>In addition to going in-class office hours to try to pinpoint how to save and remember the location inputted by users, I also used the following online resources:</p>
         <ul>
           <li><a href="https://www.weatherapi.com/api-explorer.aspx" target="_blank" class="a-2">The Weather API's Interactive API Explorer</a> to determine the elements needed to make an API call and what the response structure is.</li>
