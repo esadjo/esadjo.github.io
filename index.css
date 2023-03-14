@@ -59,6 +59,20 @@ html {
   width: 100%
 }
 
+.icon {
+  width:32px;
+  height:32px;
+}
+
+.addingicon {
+  display: flex; /* or inline-flex */
+  flex-direction: row;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+
 .logo {
   margin-left: 5%;
   font-size: 2em;
@@ -168,8 +182,8 @@ body {
   color: #25252B;
   /*justify-content: flex-start;*/  /*center;*/
   align-items: center;
-  margin-left: 50px;
-  margin-right: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
   justify-content: center; /* NOTE: what needed to get it center!! -- https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
 }
 

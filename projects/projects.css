@@ -2,17 +2,35 @@
 @import url('https://fonts.google.com/specimen/ABeeZee?query=Ab');
 
 
+head {
+  display: none;
+}
+
+html {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0px;
+  font-family: 'Montserrat', sans-serif;
+  color: #25252B;
+  width: 100%;
+  justify-content: center;
+  padding: 0;
+}
 
 .header {
-  display: flex;
-  gap: 20px;
-  width: 100%;
   background-color: #1C4A6E; /*#1a377f;*/
   flex-wrap: wrap;
-  padding: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   text-align: left;
   margin: 0px;
   color: #ffffff;
+  justify-content: center;
+  width: 100%
 }
 
 .logo {
@@ -81,33 +99,36 @@ a:hover, a.active {
   text-decoration: underline;
 }
 
-body {
-  background-color: white; /*rgb(231, 231, 231);*/
-  font-family: 'Montserrat', sans-serif;
-  color: #25252B;
-  margin: 0px; /*b/c default is 8px*/
-}
 
 
 .page-container {
-  width: 100%; /* 80%; */
   /*margin-top: 5rem;*/
   /*margin: 0px;*/ /*auto;*/
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
+  background-color: green;
+  margin: auto; /* NOTE: What needed to get it to center!!!! */
+  justify-content: center;
 }
 
 
 .page-container-2 {
-  width: 100%; /* 80%; */
+ /* width: 100%; *//* 80%; */
   /*margin-top: 5rem;*/
   /*margin: 0px;*/ /*auto;*/
   display: flex;
   flex-direction: column;
   padding: 150px 0px 150px 0px;
   /*align-items: center;*/
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: green;
+  margin: auto; /* NOTE: What needed to get it to center!!!! */
+  justify-content: center;
 }
+
 
 .spacer {
   margin: 100px 0px 100px 0px;
@@ -189,8 +210,10 @@ button:hover {
   color: #25252B;
   /*justify-content: flex-start;*/  /*center;*/
   align-items: center;
-  margin: auto;
-  
+  padding-left: 50px;
+  padding-right: 50px;
+  justify-content: center; /* NOTE: what needed to get it center!! -- https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
+  margin: 0;
 }
 
 .picture {
@@ -212,14 +235,12 @@ button:hover {
   cursor: pointer;
   object-fit: cover;
   aspect-ratio: 1;
-  margin: 0px 10px 0px 150px;
 }
 
 .project-description {
   /*QUESTION: Question of how to set the length of the words before wraps!*/
   display: flex;
   flex-direction: column;
-  margin: 0px 300px 80px 0px;
   /*margin: auto;*/
   /*line-height: 10px;*/
   /*gap: -40px;*/ /*Question of how to reduce the gap size */
