@@ -2,6 +2,23 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 @import url('https://fonts.google.com/specimen/ABeeZee?query=Ab');
 
+head {
+  display: none;
+}
+
+html {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.project-container {
+  /*display: flex;*/
+  flex-wrap: wrap;
+  width: 80%;
+  margin: 100px 0px 100px 0px;
+}
+
 .picture {
   width: 400px;
   height: 300px;
@@ -21,15 +38,15 @@
 
 
 .header {
-  display: flex;
-  gap: 20px;
-  width: 100%;
   background-color: #1C4A6E; /*#1a377f;*/
   flex-wrap: wrap;
-  padding: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   text-align: left;
   margin: 0px;
   color: #ffffff;
+  justify-content: center;
+  width: 100%
 }
 
 .logo {
@@ -39,19 +56,13 @@
 
 
 
-.project-container {
-  /*display: flex;*/
-  flex-wrap: wrap;
-  width: 80%;
-  margin: 100px 0px 100px 0px;
-  gap: 20px;
-}
+
 
 .rectangle-container {
   border-radius: 25px;
   background-color: grey;
-  padding: 100px;
-  width: 900px;
+  padding: 60px;
+  width: 100%;
   height: 400px;
   transition: color 1s;
   display: flex;
@@ -122,14 +133,13 @@ a:hover, a.active {
   text-decoration: underline;
 }
 
-
-
 body {
-  background-color: white; /*rgb(231, 231, 231);*/
+  margin: 0px;
   font-family: 'Montserrat', sans-serif;
   color: #25252B;
-  margin: 0px; /*b/c default is 8px*/
+  width: 100%;
 }
+
 
 
 .page-container {
@@ -137,8 +147,12 @@ body {
   /*margin-top: 5rem;*/
   /*margin: 0px;*/ /*auto;*/
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
+  background-color: green;
+  margin: 0px;
+  justify-content: center;
 }
 
 .project {
