@@ -21,12 +21,12 @@ html {
   /*display: flex;*/
   flex-wrap: wrap;
   padding: 100px 0px 100px 0px;
-  align-content: center;
   display: flex;
   align-items: center;
   border-radius: 25px;
-  align-content: center;
+  align-content: space-around; /*center*/
   margin: auto;
+  
 }
 
 .picture {
@@ -178,6 +178,7 @@ body {
 
 .project {
   display: flex;
+  flex-direction: row;
   gap: 70px; 
   color: #25252B;
   /*justify-content: flex-start;*/  /*center;*/
