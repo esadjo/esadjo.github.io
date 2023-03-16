@@ -68,7 +68,368 @@
               <button><a href="https://stackoverflow.com/questions/28726430/css-how-to-scale-an-image-from-the-center-instead-of-top-left" target="_blank" style="text-decoration: none;">Open Stackoverflow thread</a></button>
             </div>
           </p>
+
+          <h2>3. Text Input</h2>
+          
+          <div class="spacer"></div>
+          <h1>JavaScript</h1>
+          <p>Code to use for javascript.</p>
+          <h2>1. Chrome Storage API</h2>
+          <h3>Chrome storage</h3>
+          <div class="content-container">
+            <p class="small">
+            //To add variable plants and its value to chrome storage<br>
+            chrome.storage.sync.set({ plants: name });<br>
+            <br>
+
+            //To retrieve plant variable value from chrome storage<br>
+            chrome.storage.sync.get("plants", (items) => {
+            </p>
+            <p class="indent-mid small">
+              console.log("in chrome storaget get plants");<br>
+              type = items.plants;<br>
+              <br>
+              //You can now use the variable set to the stored value<br>
+              updateButton(type);<br>
+              globalPlant = type;
+            </p>
+
+            <p class="small">});</p>
+            
+          </div>
+
+
+          <h3>Message between popup and content script</h3>
+            <h4>popup.js</h4>
+            <div class="content-container">
+              <p class="small">
+                async function updateContentScript(addBlock, name) {<br>
+              </p>
+              <p class="indent small">
+                // Sends a message to the content script with an object the variables with the values specified below<br>
+                const message = { enable: checkbox.checked, addBlock: addBlock, type: name, location2: globalLocation};<br>
+                <br>
+                const [tab] = await chrome.tabs.query({<br>
+              </p>
+                  <p class="indent-mid small">
+                    active: true,<br>
+                    lastFocusedWindow: true,<br>
+                  </p>
+                <p class="indent small">
+                  });<br>
+                  <br>
+                  const response = await chrome.tabs.sendMessage(tab.id, message);<br>
+                  // You can do something with response from the content script here<br>
+              </p>
+              <p class="small">}</p>
+          </div>
+
+          <h4>contentscript.js</h4>
+          <div class="content-container">
+            <p class="small">
+              // Add a message listener<br>
+              chrome.runtime.onMessage.addListener((request) => {<br>
+            </p>
+            <p class="indent small">
+              showBlocks = request["enable"];<br>
+              dispType = request["type"];<br>
+              locationf = request['location2'];<br>
+              addingB = request["addBlock"];<br>
+            </p>
+            <p class="small">
+              // Can now do something with the variables and values retrieved. In this case, saving the values to storage on the content scripts side<br>
+              chrome.storage.sync.set({block: showBlocks, plant: dispType, locationFin: locationf, addBl: addingB});<br>
+              });
+            </p>         
+          </p>
         </div>
+
+        <h2>2. JS with p5 library</h2>
+        <h3>Mouse Conditions</h3>
+        <p><i>Mouse Position:</i> mouseY and mouseX can be used to retrieve the exact position of a user's mouse on the canvas. Below is an example of a piece of code that leverages mouseX and mouseY to make the visualization responsive to mouse position.</p>
+
+        <div class="content-container">
+          <p class="small">function setup() {</p>
+          
+          <p class="indent small">createCanvas(windowWidth, windowHeight);</p>
+
+            
+          <p class="small">}<br></p>
+
+          <p class="small">function draw() {</p>
+          <p class="indent small">
+            background(209, 241, 255);<br>
+            for (let i = 0; i < 20; i++) {
+          </p>
+          <p class="indent-mid small">
+            stroke(100 - (mouseX/3), 91 - (8*i), 150 - 2*(mouseY/100));<br>
+            strokeWeight(1+ mouseX/400);<br>
+            fill(200 - (mouseX/3), 191 - (8*i), 250 - 2*(mouseY/100));<br>
+            bezier(mouseY + i*3000, 0 + i*10, mouseX - 4000, mouseY - 1000, 0, 400, 1000, windowHeight + 1000);<br>
+          </p>
+          <p class="indent small">}</p>
+          <p class="small">}<br></p>
+
+          <img src="../projects/creativecode/gallery/images/Sketch Four_Interactive.gif" class="picture">
+        
+          <div class="spacer"></div>
+        
+
+        <p><i>Mouse Pressed Down:</i>The function mousePressed() can be used to specify what happens when a user pressed their mouse down.</p>
+
+        [ADD code and add the giff of the code in action]
+
+        <h2>3. JS with p5.play library</h2>
+        <h3>Sprites controlled by keyboard keys</h3>
+        <p>The code below sets up a sprite to be controlled by arrow keys. In this example, the sprite is called player.</p>
+
+        <div class="content-container">
+          <p class="indent small">
+            let player;<br>
+            <br>
+            window.keyPressed = () => {
+          </p>
+          <p class="indent-mid small">if (keyCode == RIGHT_ARROW) {</p>
+          <p class="indent-large small">
+            player.direction = 0;<br>
+            player.speed = 3.5;
+          </p>
+          <p class="indent-mid small">}</p>
+
+          
+          
+          <p class="indent-mid small">else if (keyCode == DOWN_ARROW) {</p>
+          <p class="indent-large small">
+            player.direction = 90;<br>
+            player.speed = 3.5;
+          </p>
+          <p class="indent-mid small">}</p>
+          
+          
+          <p class="indent-mid small">else if (keyCode == LEFT_ARROW) {</p>
+          <p class="indent-large small">
+            player.direction = 180;<br>
+            player.speed = 3.5;
+          </p>
+          <p class="indent-mid small">}</p>
+
+          <p class="indent-mid small">else if (keyCode == UP_ARROW) {</p>
+          <p class="indent-large small">
+            player.direction = 270;<br>
+            player.speed = 3.5;
+          </p>
+          <p class="indent-mid small">}</p>
+
+          
+            
+          
+      
+
+          <p class="indent-mid small"><else if (key == ' ') { </p>
+          <p class="indent-large small">
+            player.direction = 0;<br>
+            player.speed = 0;
+          </p>
+          <p class="indent-mid small">
+            }<br>
+            return false;  
+          </p>
+
+
+
+          <p class="indent small">};</p>
+
+
+          <p class="indent small"></p>
+          <p class="indent-mid small"></p>
+          <p class="indent small"></p>
+        </div>
+
+        <h3>Adding multiple sprites to a group</h3>
+        <p>The code below addd multiple sprites to a group and specifies random position and speed for each sprite in the group. In this example, fires is the sprite group and fire is an individual sprite.</p>
+
+        <div class="content-container">
+          <p class="indent small">
+            let fire;<br>
+            let fires;<br>
+            <br>
+            window.setup = () => {
+          </p>
+
+          <p class="indent-mid small">
+            fires = new Group();<br>
+            for (let i = 0; i < 5; i++) { 
+          </p>
+
+          <p class="indent-large small">
+            fire = new Sprite(random(windowWidth), random(windowHeight)); // (random(windowWidth), random(windowHeight));<br>
+            fire.img = 'images/fire.png';<br>
+            fire.speed = random(10); <br>
+            fire.rotationSpeed  = random(10); <br>
+            fire.position.x = random(windowWidth); <br>
+            fire.position.y = random(windowHeight); <br>
+            fires.add(fire); // adds sprite to the fires group<br>
+            console.log("Length: " + fires.length); // shows how many sprites are in the fires group
+          </p>
+
+          <p class="indent-mid small">}</p>
+
+          <p class="indent small">};</p>
+        </div>
+          
+          
+
+        <h2>Miscelaneous</h2>
+        <p>Miscelaneous, but useful code that applies across html, css, javascript, and more.</p>
+        <h3>Toggles</h3>
+        <p>The code below creates a toggle, and through javascript code, you can check and save what the current state of the toggle (off or on).</p>
+
+        <div class="checkbox-container" style="margin-left: 40%">Text
+          <label class="switch" for="enable">
+            <input id="enable" type="checkbox" checked>
+            <span class="slider round"></span>
+          </label>
+        </div>
+
+        <h4>HTML</h4>
+        <div class="content-container">
+          <p class="indent small">
+            <!--<div class="checkbox-container">Launch world-->
+          </p>
+          
+          <p class="indent-mid small">
+              <!--<label class="switch" for="enable">-->
+          </p>
+
+          <p class="indent-large small">
+            <!--<input id="enable" type="checkbox" checked><br>-->
+            <!--<span class="slider round"></span>-->
+
+          </p>
+          
+          <p class="indent-mid small">
+              <!--</label>-->
+          </p>
+
+          <p class="indent small"><!--</div>--></p>
+        </div>
+
+        <h4>CSS</h4>
+        <div class="content-container">
+          <p class="indent small">.checkbox-container {</p>
+          <p class="indent-mid small">
+              font-family: 'Lato', sans-serif;<br>
+              font-weight: 400;<br>
+              display: flex;<br>
+              align-items: center;<br>
+              margin-bottom: 0.2rem;<br>
+          </p>
+          <p class="indent small">}</p>
+
+
+          <p class="indent small">
+            /* Code for slider based on w3school */<br> 
+            /* Code for the switch (toggle background portion) dimensions and positioning */<br>
+            .switch {
+          </p>
+
+          <p class="indent-mid small">
+            position: absolute;<br>
+            left: 50%;<br>
+            display: inline-block;<br>
+            width: 55px;<br>
+            height: 29px;
+          </p>
+          <p class="indent small">}</p>
+
+
+          <p class="indent small">
+            /* Hide the default HTML checkbox by reducing size and opacity */<br>
+            .switch input {
+          </p>
+          
+          <p class="indent-mid small">
+            opacity: 0;<br>
+            width: 0;<br>
+            height: 0;
+          </p>
+          <p class="indent small">}</p>
+
+
+          <p class="indent small">
+            /* Code for the slider within the toggle*/<br>
+            .slider {
+          </p>
+
+          <p class="indent-mid small">
+            position: absolute;<br>
+            cursor: pointer;<br>
+            top: 0;<br>
+            left: 0;<br>
+            right: 0;<br>
+            bottom: 0;<br>
+            border-radius: 29px;<br>
+            background-color: #ccc;<br>
+            -webkit-transition: .3s;<br>
+            transition: .3s;
+          </p>
+          <p class="indent small">}</p>
+
+
+          <p class="indent small">
+            /* Disabled slider state */<br>
+            .slider:before {
+          </p>
+          <p class="indent-mid small">
+            position: absolute;<br>
+            content: "";<br>
+            height: 19px;<br>
+            width: 19px;<br>
+            left: 4px;<br>
+            bottom: 4px;<br>
+            border-radius: 29px;<br>
+            background-color: white;<br>
+            -webkit-transition: .4s;<br>
+            transition: .4s;
+          </p>
+          <p class="indent small">}</p>
+
+          <p class="indent small">
+            input:checked + .slider {
+          </p>
+          <p class="indent-mid small">background-color: #005B90;</p>
+          <p class="indent small">}</p>
+
+          <p class="indent small">input:focus + .slider {</p>
+          <p class="indent-mid small">box-shadow: 0 0 1px #005B90;</p>
+          <p class="indent small">}</p>
+
+          
+            
+          
+
+          <p class="indent small">input:checked + .slider:before {</p>
+          <p class="indent-mid small">
+            -webkit-transform: translateX(26px);<br>
+            -ms-transform: translateX(26px);<br>
+            transform: translateX(26px);
+          </p>
+          <p class="indent small">}</p>
+
+          <p class="indent small"></p>
+          <p class="indent-mid small"></p>
+          <p class="indent small"></p>
+        </div>
+
+        <h4>JS</h4>
+        <p>The code below allows you to check the current state of a toggle with the id "enable"</p>
+        <div class="content-container">
+          <p class="indent small">
+            const checkbox = document.getElementById("enable");<br>
+            console.log("Checkbox status before: " + checkbox.checked);
+          </p>
+        </div>
+    
     </div>
 
   </body>

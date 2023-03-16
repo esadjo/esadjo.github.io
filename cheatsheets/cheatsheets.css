@@ -52,6 +52,12 @@ h3 {
   font-weight: bold; 
 }
 
+h4 {
+  font-family: 'ABeeZee', sans-serif;
+  font-size: 22px;
+  font-weight: normal; 
+}
+
 p {
   font-size: 18px;
 }
@@ -105,6 +111,18 @@ body {
   margin-bottom: 0px;
 }
 
+.indent-mid {
+  margin-left: 45px; 
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.indent-large {
+  margin-left: 65px; 
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
 .small {
   font-size: 16px;
 }
@@ -145,3 +163,75 @@ button {
 button:hover {
   opacity: 60%;
 }
+
+
+/* Code for slider based on w3school */ 
+/* Code for the switch (toggle background portion) dimensions and positioning */
+.switch {
+  position: absolute;
+  left: 50%; /*50%;*/
+  display: inline-block;
+  width: 55px;
+  height: 29px;
+}
+
+/* Hide the default HTML checkbox by reducing size and opacity */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Code for the slider within the toggle*/
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 29px;
+  background-color: #ccc;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+/* Disabled slider state */
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 19px;
+  width: 19px;
+  left: 4px;
+  bottom: 4px;
+  border-radius: 29px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #005B90;
+}
+
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #005B90;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+
+.picture {
+  width: 450px;
+  height: 261px;
+  border-radius: 20px;
+  cursor: pointer;
+  object-fit: cover;
+  aspect-ratio: 1;
+}
+
